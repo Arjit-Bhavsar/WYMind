@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn | WyoMind - Mental Health Literacy for Wyoming Teens</title>
+    <meta name="description" content="Learn about depression, anxiety, supporting friends, and more. Research-backed mental health education for Wyoming teens.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #6B9BC3;
+            --sky-light: #A3C4E0;
+            --sage: #7D9B76;
+            --sage-dark: #5A7254;
+            --prairie: #C9B896;
+            --earth: #8B7355;
+            --cream: #F7F5F0;
+            --cream-dark: #EBE8E0;
+            --night: #2D3436;
+            --night-light: #4A5254;
+            --rust: #C17B5E;
+            --rust-dark: #A65D40;
+            --crisis-red: #DC3545;
+            --text-primary: #2D3436;
+            --text-secondary: #636E72;
+            --border-light: rgba(45, 52, 54, 0.08);
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+            --shadow-soft: 0 4px 20px rgba(45, 52, 54, 0.06);
+            --shadow-medium: 0 8px 30px rgba(45, 52, 54, 0.1);
+            --shadow-strong: 0 12px 40px rgba(45, 52, 54, 0.14);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--cream); color: var(--text-primary); line-height: 1.75; font-size: 18px; }
+
+        /* Safety Banner */
+        .safety-banner {
+            background: linear-gradient(135deg, var(--crisis-red) 0%, #B02A37 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .safety-banner a { color: white; font-weight: 700; text-decoration: underline; }
+
+        /* Navigation */
+        .navbar { position: fixed; top: 0; left: 0; right: 0; padding: 1.1rem 2rem; background: rgba(247, 245, 240, 0.97); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid var(--border-light); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--night); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo-mark { width: 48px; height: 48px; background: linear-gradient(135deg, var(--sage) 0%, var(--sky-blue) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        .logo-mark::after { content: 'WY'; font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: white; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; align-items: center; }
+        .nav-links a { font-size: 1.05rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; padding: 0.65rem 1.1rem; border-radius: var(--radius-sm); transition: var(--transition); }
+        .nav-links a:hover { color: var(--text-primary); background: var(--cream-dark); }
+        .nav-links a.active { color: var(--sage-dark); background: rgba(125, 155, 118, 0.15); }
+        .nav-links a.nav-cta { background: var(--rust); color: white; font-weight: 600; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .mobile-menu-btn span { display: block; width: 26px; height: 3px; background: var(--night); margin: 5px 0; border-radius: 2px; }
+
+        /* Page Header */
+        .page-header {
+            padding: 10rem 2rem 4rem;
+            background: linear-gradient(180deg, white 0%, var(--cream) 100%);
+            text-align: center;
+        }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--night);
+            margin-bottom: 1.25rem;
+        }
+        .page-header p {
+            font-size: 1.35rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+        .disclaimer-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(107, 155, 195, 0.15);
+            border: 2px solid var(--sky-blue);
+            padding: 1rem 1.75rem;
+            border-radius: var(--radius-md);
+            font-size: 1.1rem;
+            color: var(--night);
+        }
+        .disclaimer-banner svg { width: 24px; height: 24px; fill: var(--sky-blue); flex-shrink: 0; }
+
+        /* Table of Contents */
+        .toc-section {
+            padding: 3rem 2rem;
+            background: white;
+            border-bottom: 2px solid var(--border-light);
+        }
+        .toc-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .toc-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--night);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .toc-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.1rem 1.35rem;
+            background: var(--cream);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--night);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        .toc-item:hover {
+            border-color: var(--sage);
+            transform: translateX(4px);
+        }
+        .toc-num {
+            width: 36px;
+            height: 36px;
+            background: var(--sage);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 5rem 2rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+        .content-section:nth-child(odd) { background: white; }
+        .content-section:nth-child(even) { background: var(--cream); }
+        .content-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Section Header */
+        .section-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.75rem;
+        }
+        .section-icon svg { width: 40px; height: 40px; fill: white; }
+        .section-icon.depression { background: linear-gradient(135deg, var(--sky-blue) 0%, #4A7AB3 100%); }
+        .section-icon.anxiety { background: linear-gradient(135deg, #74B9FF 0%, #0984E3 100%); }
+        .section-icon.isolation { background: linear-gradient(135deg, #E17055 0%, #D63031 100%); }
+        .section-icon.stigma { background: linear-gradient(135deg, #A29BFE 0%, #6C5CE7 100%); }
+        .section-icon.support { background: linear-gradient(135deg, #00B894 0%, #00A085 100%); }
+        .section-icon.suicide { background: linear-gradient(135deg, var(--rust) 0%, var(--rust-dark) 100%); }
+
+        .content-section h2 {
+            font-family: var(--font-display);
+            font-size: 2.25rem;
+            color: var(--night);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .section-intro {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        /* Content Blocks */
+        .content-block {
+            margin-bottom: 2.5rem;
+        }
+        .content-block:last-child { margin-bottom: 0; }
+        .content-block h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--night);
+            margin-bottom: 1rem;
+        }
+        .content-block p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+        .content-block ul, .content-block ol {
+            margin: 1.25rem 0;
+            padding-left: 1.5rem;
+        }
+        .content-block li {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.65;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            padding: 1.75rem 2rem;
+            border-radius: var(--radius-md);
+            margin: 2rem 0;
+        }
+        .callout-wyoming {
+            background: linear-gradient(135deg, rgba(201, 184, 150, 0.2) 0%, rgba(139, 115, 85, 0.1) 100%);
+            border-left: 5px solid var(--earth);
+        }
+        .callout-wyoming h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--earth);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .callout-wyoming h4::before { content: '📍'; }
+        .callout-wyoming p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .callout-important {
+            background: linear-gradient(135deg, rgba(107, 155, 195, 0.12) 0%, rgba(125, 155, 118, 0.1) 100%);
+            border-left: 5px solid var(--sage);
+        }
+        .callout-important h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--sage-dark);
+            margin-bottom: 0.75rem;
+        }
+        .callout-important p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .callout-crisis {
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1) 0%, rgba(220, 53, 69, 0.05) 100%);
+            border-left: 5px solid var(--crisis-red);
+        }
+        .callout-crisis h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--crisis-red);
+            margin-bottom: 0.75rem;
+        }
+        .callout-crisis p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+        .callout-crisis a {
+            color: var(--crisis-red);
+            font-weight: 600;
+        }
+
+        /* Signs Grid */
+        .signs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .sign-card {
+            background: white;
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+        }
+        .sign-card h4 {
+            font-size: 1.1rem;
+            color: var(--night);
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+        .sign-card p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Next Section Link */
+        .next-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-light);
+        }
+        .next-section a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 1.75rem;
+            background: var(--night);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        .next-section a:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+        }
+        .next-section a svg { width: 20px; height: 20px; fill: currentColor; }
+
+        /* Back to Top */
+        .back-to-top {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: white;
+        }
+        .back-to-top a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        .back-to-top a:hover { color: var(--night); }
+        .back-to-top a svg { width: 18px; height: 18px; fill: currentColor; }
+
+        /* Crisis Resources Box */
+        .crisis-box {
+            background: linear-gradient(135deg, var(--crisis-red) 0%, #B02A37 100%);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            color: white;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .crisis-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .crisis-box p { font-size: 1.15rem; opacity: 0.95; margin-bottom: 1rem; }
+        .crisis-box .number {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .crisis-box .subtitle { font-size: 1.1rem; opacity: 0.9; margin-top: 0.5rem; }
+
+        /* Footer */
+        footer {
+            background: var(--night);
+            color: white;
+            padding: 4rem 2rem 3rem;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .footer-brand { display: flex; align-items: center; gap: 0.85rem; }
+        .footer-brand .logo-mark { width: 44px; height: 44px; }
+        .footer-brand span { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
+        .footer-links { display: flex; gap: 2.75rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--sky-light); text-decoration: none; font-size: 1.1rem; }
+        .footer-links a:hover { color: white; }
+        .footer-disclaimer {
+            width: 100%;
+            text-align: center;
+            padding-top: 2.75rem;
+            margin-top: 1.75rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.05rem;
+            color: var(--sky-light);
+            line-height: 1.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body { font-size: 17px; }
+            .navbar { padding: 1rem 1.5rem; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); flex-direction: column; padding: 1.5rem; gap: 0.5rem; box-shadow: var(--shadow-medium); }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .page-header { padding: 8rem 1.5rem 3rem; }
+            .page-header h1 { font-size: 2.25rem; }
+            .page-header p { font-size: 1.15rem; }
+            .content-section { padding: 3.5rem 1.5rem; }
+            .content-section h2 { font-size: 1.85rem; }
+            .section-intro { font-size: 1.1rem; }
+            .content-block h3 { font-size: 1.35rem; }
+            .content-block p, .content-block li { font-size: 1.05rem; }
+            .toc-grid { grid-template-columns: 1fr; }
+            .signs-grid { grid-template-columns: 1fr; }
+            .footer-container { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Safety Banner -->
+    <div class="safety-banner">
+        <strong>In crisis or thinking about suicide?</strong> Call or text <a href="tel:988">988</a> now — free, confidential, 24/7.
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark"></div>
+                WyoMind
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learn.html" class="active">Learn</a></li>
+                <li><a href="index.html#resources">Get Help</a></li>
+                <li><a href="https://screening.mhanational.org/screening-tools/" target="_blank" rel="noopener" class="nav-cta">Take a Screening →</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Mental Health Literacy</h1>
+        <p>Research-backed information to help you understand mental health — for yourself and the people around you. Written for Wyoming teens, useful for everyone.</p>
+        <div class="disclaimer-banner">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <span><strong>Educational only.</strong> This page cannot diagnose or treat anyone.</span>
+        </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="toc-container">
+            <h2 class="toc-title">What's Covered</h2>
+            <div class="toc-grid">
+                <a href="#depression" class="toc-item"><span class="toc-num">1</span> Understanding Depression</a>
+                <a href="#anxiety" class="toc-item"><span class="toc-num">2</span> Anxiety & Panic</a>
+                <a href="#isolation" class="toc-item"><span class="toc-num">3</span> Isolation & Loneliness</a>
+                <a href="#stigma" class="toc-item"><span class="toc-num">4</span> Stigma & Getting Help</a>
+                <a href="#supporting" class="toc-item"><span class="toc-num">5</span> Supporting Friends</a>
+                <a href="#suicide" class="toc-item"><span class="toc-num">6</span> Suicide Awareness</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Depression -->
+    <section class="content-section" id="depression">
+        <div class="content-container">
+            <div class="section-icon depression">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <h2>Understanding Depression</h2>
+            <p class="section-intro">Depression is a real health condition — not a personal weakness, and not something you can just "snap out of."</p>
+
+            <div class="content-block">
+                <h3>What Depression Actually Is</h3>
+                <p>Depression is a mental health condition where sadness, emptiness, or irritability lasts most of the day, nearly every day, and starts to interfere with school, friends, family, or activities you used to enjoy.</p>
+                <p>Normal ups and downs are different. In depression, changes in sleep, appetite, energy, concentration, and self-worth often show up together and persist for <strong>weeks</strong>, not just a few days.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>How It Looks in Teens</h3>
+                <p>Teen depression doesn't always look like sadness. It can show up as:</p>
+                <div class="signs-grid">
+                    <div class="sign-card">
+                        <h4>Mood Changes</h4>
+                        <p>Feeling down, empty, hopeless, or constantly irritable and angry — even over small things.</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Losing Interest</h4>
+                        <p>Activities you used to enjoy now feel pointless or exhausting. Nothing sounds fun anymore.</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Physical Signs</h4>
+                        <p>Sleeping too much or too little, appetite changes, unexplained headaches or stomachaches, low energy.</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Thinking Changes</h4>
+                        <p>Trouble concentrating on schoolwork, very negative self-talk like "I'm a failure" or "Nothing will ever get better."</p>
+                    </div>
+                </div>
+                <p>Some teens show more acting out, falling grades, or physical complaints instead of "looking sad." <strong>Thoughts about death or dying always mean it's time to reach out for help</strong>, even if you're not planning to act on them.</p>
+            </div>
+
+            <div class="callout callout-wyoming">
+                <h4>Wyoming Connection</h4>
+                <p>Wyoming's high suicide rates mean that untreated or severe depression can be especially dangerous when combined with easy access to lethal means like firearms. Rural distances and weather can make in-person support harder to reach — which is why recognizing early signs and talking to trusted adults sooner is particularly important here.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>What Helps</h3>
+                <p>Research supports several approaches for adolescent depression:</p>
+                <ul>
+                    <li><strong>Talk therapy</strong> — Cognitive behavioral therapy (CBT) and interpersonal therapy (IPT) are structured conversations that teach coping skills and address thinking patterns.</li>
+                    <li><strong>Medication</strong> — Sometimes clinicians prescribe antidepressants for moderate to severe depression, with close monitoring. These decisions are made by medical professionals.</li>
+                    <li><strong>Healthy routines</strong> — Regular sleep, physical activity, and staying connected to at least one supportive person can support recovery, but should not replace professional care when symptoms are significant.</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-important">
+                <h4>Key Takeaway</h4>
+                <p>Depression is common and treatable. About 1 in 5 U.S. teens experiences a major depressive episode each year. If you notice these patterns in yourself or someone else lasting more than a couple weeks, it's time to talk to a trusted adult.</p>
+            </div>
+
+            <div class="next-section">
+                <a href="#anxiety">Next: Anxiety & Panic <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Anxiety -->
+    <section class="content-section" id="anxiety">
+        <div class="content-container">
+            <div class="section-icon anxiety">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <h2>Anxiety & Panic</h2>
+            <p class="section-intro">Everyone feels anxious sometimes. It becomes a problem when worry or fear is so strong that it interferes with daily life.</p>
+
+            <div class="content-block">
+                <h3>Normal Anxiety vs. Anxiety Disorders</h3>
+                <p>Anxiety is part of everyone's life — it can actually help you prepare for challenges. It becomes a <strong>disorder</strong> when worry, fear, or physical symptoms are:</p>
+                <ul>
+                    <li>Very strong or intense</li>
+                    <li>Happening frequently (most days)</li>
+                    <li>Interfering with school, friendships, or daily activities</li>
+                </ul>
+                <p>Common anxiety problems in teens include generalized anxiety (chronic worry about many things), social anxiety (fear of being judged), and panic attacks.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>How Anxiety Shows Up</h3>
+                <div class="signs-grid">
+                    <div class="sign-card">
+                        <h4>Mental Signs</h4>
+                        <p>Constant worry, feeling on edge, trouble concentrating, expecting the worst to happen.</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Physical Signs</h4>
+                        <p>Racing heart, shortness of breath, sweating, shaky hands, stomachaches, muscle tension.</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Behavioral Signs</h4>
+                        <p>Avoiding situations that make you anxious, needing constant reassurance, trouble sleeping.</p>
+                    </div>
+                </div>
+                <p>Some teens visit school nurses or doctors frequently for physical symptoms without an obvious medical cause — this can be a sign of underlying anxiety.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>What Panic Attacks Feel Like</h3>
+                <p>A panic attack is a sudden surge of intense fear that peaks within minutes. Symptoms often include:</p>
+                <ul>
+                    <li>Racing heart, chest pain, or shortness of breath</li>
+                    <li>Dizziness or feeling "out of control"</li>
+                    <li>Feeling detached from yourself or your surroundings</li>
+                    <li>Fear that you're having a heart attack or "going crazy"</li>
+                </ul>
+                <p>Panic attacks are very uncomfortable but are usually not physically dangerous. If you've never had one evaluated, it's worth seeing a doctor to rule out physical causes.</p>
+            </div>
+
+            <div class="callout callout-wyoming">
+                <h4>Wyoming Connection</h4>
+                <p>Long travel distances to school, sports, or healthcare, severe weather, and small tight-knit communities can amplify school and social anxieties for Wyoming teens. In remote areas with limited immediate medical access, panic symptoms can feel especially frightening. Knowing that panic attacks, while uncomfortable, are usually not dangerous can help reduce the fear.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>What Helps</h3>
+                <ul>
+                    <li><strong>Therapy</strong> — CBT and exposure-based approaches help teens gradually face fears in a planned, safe way.</li>
+                    <li><strong>Coping skills</strong> — Slow, steady breathing, grounding techniques, and realistic thinking can make anxiety more manageable.</li>
+                    <li><strong>Support</strong> — Listen without minimizing fears, avoid pressure to "just get over it," and encourage professional help when anxiety affects daily life.</li>
+                </ul>
+            </div>
+
+            <div class="next-section">
+                <a href="#isolation">Next: Isolation & Loneliness <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Isolation -->
+    <section class="content-section" id="isolation">
+        <div class="content-container">
+            <div class="section-icon isolation">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
+            </div>
+            <h2>Isolation & Loneliness</h2>
+            <p class="section-intro">There's a difference between enjoying alone time and feeling painfully disconnected from others.</p>
+
+            <div class="content-block">
+                <h3>Loneliness vs. Alone Time</h3>
+                <p>Healthy alone time can feel peaceful or productive — you choose it and it recharges you.</p>
+                <p><strong>Loneliness</strong> feels painful, disconnected, or hopeless — even when other people are nearby. When teens start withdrawing from friends, family, and activities they used to enjoy, and this lasts for weeks, it can signal depression, anxiety, or other problems.</p>
+            </div>
+
+            <div class="callout callout-wyoming">
+                <h4>Wyoming Connection</h4>
+                <p>Wyoming teens often face long physical distances between homes, limited public transportation, and weather that makes face-to-face time harder. Small school sizes and tight-knit communities can be strengths — but may also make some teens worry more about fitting in or being judged. These factors can increase isolation even when you're surrounded by people who care.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>What Can Help</h3>
+                <ul>
+                    <li><strong>One connection matters</strong> — Research shows that even one trusted adult or peer can make a significant difference.</li>
+                    <li><strong>Online counts too</strong> — Supportive relationships, whether online or offline, are protective.</li>
+                    <li><strong>Join something</strong> — Clubs, teams, cultural groups, or community activities can help build connection, especially when you plan around transportation or weather challenges with adults.</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-important">
+                <h4>Key Takeaway</h4>
+                <p>Feeling lonely doesn't mean something is wrong with you. It means you're human and you need connection. Even small steps — texting a friend, joining one activity, talking to one trusted adult — can start to shift the feeling.</p>
+            </div>
+
+            <div class="next-section">
+                <a href="#stigma">Next: Stigma & Getting Help <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Stigma -->
+    <section class="content-section" id="stigma">
+        <div class="content-container">
+            <div class="section-icon stigma">
+                <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+            </div>
+            <h2>Stigma & Getting Help</h2>
+            <p class="section-intro">Many people avoid getting help because they worry what others will think. Understanding stigma is the first step to overcoming it.</p>
+
+            <div class="content-block">
+                <h3>What Stigma Is</h3>
+                <p>Stigma includes negative stereotypes, prejudice, and discrimination directed at people with mental health conditions. It can come from others — or from within ourselves.</p>
+                <p>Many teens believe that mental health problems mean someone is <strong>"weak" rather than "sick."</strong> This belief makes people less likely to seek help when they need it.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>How Stigma Hurts</h3>
+                <ul>
+                    <li>Hiding symptoms instead of getting help</li>
+                    <li>Avoiding treatment even when it would help</li>
+                    <li>Distancing from peers who are struggling</li>
+                    <li>Lower self-esteem when you believe negative things about yourself</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-wyoming">
+                <h4>Wyoming Connection</h4>
+                <p>Frontier culture values toughness and self-reliance — which can be real strengths. But they can also make it harder for teens to say "I'm struggling and I need help." Local campaigns in Wyoming emphasize that seeking help is a sign of <strong>responsibility</strong>, not weakness. Taking care of your mind is as practical as taking care of your truck.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>What Reduces Stigma</h3>
+                <ul>
+                    <li><strong>Personal contact</strong> — Knowing someone who has dealt with mental health challenges reduces stereotypes.</li>
+                    <li><strong>Accurate information</strong> — Learning that mental health conditions are common, treatable, and not a character flaw.</li>
+                    <li><strong>Respectful language</strong> — Talking about mental health the same way we talk about physical health.</li>
+                    <li><strong>Normalizing conversations</strong> — Schools and groups that openly discuss mental health see better help-seeking.</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>How to Ask for Help</h3>
+                <p>Many teens with mental health needs never receive services — often due to stigma, lack of knowledge, or access issues. Here's a simple script that can help:</p>
+                <div class="callout callout-important">
+                    <h4>Try Saying</h4>
+                    <p>"I've been feeling really [down/anxious/stressed] for a few weeks and it's not going away. Can we talk about it?" or "I'm worried about myself. Can you help me find someone to talk to?"</p>
+                </div>
+            </div>
+
+            <div class="next-section">
+                <a href="#supporting">Next: Supporting Friends <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Supporting Friends -->
+    <section class="content-section" id="supporting">
+        <div class="content-container">
+            <div class="section-icon support">
+                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <h2>Supporting Friends</h2>
+            <p class="section-intro">You can make a real difference for a friend who's struggling — without being their therapist.</p>
+
+            <div class="content-block">
+                <h3>What Helps</h3>
+                <div class="signs-grid">
+                    <div class="sign-card">
+                        <h4>Listen</h4>
+                        <p>Let them talk without jumping to advice or trying to fix things. Sometimes just being heard is what matters most.</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Validate</h4>
+                        <p>"That sounds really hard." Don't minimize with "others have it worse" or "just cheer up."</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Stay Present</h4>
+                        <p>If someone is very distressed, stay with them. Your calm presence matters.</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Encourage Help</h4>
+                        <p>Gently encourage them to talk to a trusted adult or professional. Offer to go with them.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>What Doesn't Help</h3>
+                <ul>
+                    <li>Saying "just get over it" or "you have nothing to be sad about"</li>
+                    <li>Comparing their problems to others'</li>
+                    <li>Trying to be their therapist or sole support system</li>
+                    <li>Promising to keep serious safety concerns secret</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-crisis">
+                <h4>Important: When to Get Adults Involved</h4>
+                <p>If a friend talks about wanting to die, hurting themselves, or if you're genuinely worried about their safety — <strong>you need to involve an adult</strong>, even if your friend asks you not to. Their life matters more than temporary anger. You can say: "I care about you too much to keep this to myself. I'm going to help you get help."</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Taking Care of Yourself Too</h3>
+                <p>Supporting a struggling friend can be heavy. Remember:</p>
+                <ul>
+                    <li>You are not responsible for fixing them</li>
+                    <li>It's okay to have boundaries</li>
+                    <li>You deserve support too — talk to a trusted adult about how you're feeling</li>
+                </ul>
+            </div>
+
+            <div class="next-section">
+                <a href="#suicide">Next: Suicide Awareness <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Suicide Awareness -->
+    <section class="content-section" id="suicide">
+        <div class="content-container">
+            <div class="callout callout-crisis" style="margin-top: 0; margin-bottom: 2rem;">
+                <h4>If You're Thinking About Suicide Right Now</h4>
+                <p>Please reach out. Call or text <strong><a href="tel:988">988</a></strong> to talk to someone who can help. You don't have to face this alone.</p>
+            </div>
+
+            <div class="section-icon suicide">
+                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <h2>Suicide Awareness</h2>
+            <p class="section-intro">Talking about suicide doesn't cause it. Understanding warning signs and knowing how to respond can save lives.</p>
+
+            <div class="content-block">
+                <h3>Why This Matters</h3>
+                <p>Suicide is a leading cause of death among adolescents and young adults. Wyoming's suicide rate is consistently among the highest in the nation, with firearms accounting for about 72% of deaths.</p>
+                <p>But suicide is <strong>preventable</strong>. Most people who are suicidal don't want to die — they want the pain to stop. With help, the crisis can pass.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Warning Signs</h3>
+                <p>Watch for these changes, especially if several happen together:</p>
+                <ul>
+                    <li>Talking or writing about wanting to die or feeling hopeless</li>
+                    <li>Saying things like "I'm a burden" or "Everyone would be better off without me"</li>
+                    <li>Withdrawing from friends, family, and activities</li>
+                    <li>Major mood changes — including sudden calmness after a period of depression</li>
+                    <li>Giving away belongings or saying goodbye in unusual ways</li>
+                    <li>Increased use of alcohol or drugs</li>
+                    <li>Looking for ways to hurt themselves</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Risk and Protective Factors</h3>
+                <div class="signs-grid">
+                    <div class="sign-card">
+                        <h4>Risk Factors</h4>
+                        <p>Depression, substance use, previous self-harm, trauma, bullying, discrimination, access to lethal means, feeling like a burden.</p>
+                    </div>
+                    <div class="sign-card">
+                        <h4>Protective Factors</h4>
+                        <p>Strong family/peer support, sense of belonging, cultural/spiritual connection, safe storage of firearms and medications, access to mental health care.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout callout-wyoming">
+                <h4>Wyoming Connection</h4>
+                <p>High firearm ownership and long distances to hospitals or crisis centers make <strong>means safety</strong> especially important in Wyoming. If someone is in crisis, reducing access to lethal means (safely storing firearms, medications) can buy time for the crisis to pass. Community values of looking out for neighbors can support prevention when people feel safe speaking up.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>How to Respond</h3>
+                <p><strong>It is safe to ask directly</strong> if someone is thinking about suicide. Research shows that asking does not "put the idea in someone's head" — it opens the door for them to get help.</p>
+                <p>If someone is at immediate risk:</p>
+                <ol>
+                    <li><strong>Stay with them</strong> — Don't leave them alone</li>
+                    <li><strong>Remove access to lethal means</strong> if possible and safe to do</li>
+                    <li><strong>Get help</strong> — Call 988, text 741741, or contact emergency services</li>
+                    <li><strong>Don't promise secrecy</strong> — Their life matters more</li>
+                </ol>
+            </div>
+
+            <div class="crisis-box">
+                <h3>Crisis Resources</h3>
+                <p>If you or someone you know needs help now:</p>
+                <div class="number">988</div>
+                <p class="subtitle">Suicide & Crisis Lifeline — Call or Text 24/7</p>
+                <p style="margin-top: 1rem; font-size: 1rem;">Crisis Text Line: Text HOME to <strong>741741</strong></p>
+            </div>
+
+            <div class="callout callout-important">
+                <h4>Remember</h4>
+                <p>You don't have to handle this alone. If you're worried about someone, tell a trusted adult. If you're struggling yourself, please reach out. Help is available, and you deserve it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <a href="#top">
+            <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+            Back to top
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-mark"></div>
+                <span>WyoMind</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="learn.html">Learn</a>
+                <a href="index.html#resources">Get Help</a>
+                <a href="https://screening.mhanational.org/screening-tools/" target="_blank" rel="noopener">MHA Screening</a>
+            </div>
+            <div class="footer-disclaimer">
+                <strong>Educational Resource:</strong> This site provides mental health education only. It cannot diagnose or treat. If you are in immediate danger or thinking about suicide, contact <strong>988</strong> or emergency services now.<br><br>
+                © 2025 WyoMind · Built by a Wyoming student · Not a substitute for professional care
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
