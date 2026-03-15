@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSTT8GND0W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LSTT8GND0W');
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn | WYMind - Mental Health Literacy for Wyoming Teens</title>
@@ -247,7 +254,7 @@
         .callout-wyoming p {
             font-size: 1.1rem;
             color: var(--text-secondary);
-            margin: 0 0 0.75rem 0;
+            margin: 0 0 1rem 0;
             line-height: 1.7;
         }
         .callout-wyoming p:last-child { margin-bottom: 0; }
@@ -288,6 +295,39 @@
         .callout-crisis a {
             color: var(--crisis-red);
             font-weight: 600;
+        }
+
+        /* Trusted Adult Callout */
+        .callout-trusted {
+            background: linear-gradient(135deg, rgba(125, 155, 118, 0.15) 0%, rgba(107, 155, 195, 0.1) 100%);
+            border-left: 5px solid var(--sage);
+        }
+        .callout-trusted h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--sage-dark);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .callout-trusted h4::before { content: '🤝'; }
+        .callout-trusted p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin: 0 0 1rem 0;
+            line-height: 1.7;
+        }
+        .callout-trusted p:last-child { margin-bottom: 0; }
+        .callout-trusted ul {
+            margin: 0.75rem 0 0 0;
+            padding-left: 1.25rem;
+        }
+        .callout-trusted li {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
         }
 
         /* Signs Grid */
@@ -384,6 +424,8 @@
             font-weight: 700;
             letter-spacing: 0.05em;
         }
+        .crisis-box .number a { color: white; text-decoration: none; }
+        .crisis-box .number a:hover { text-decoration: underline; }
         .crisis-box .subtitle { font-size: 1.1rem; opacity: 0.9; margin-top: 0.5rem; }
 
         /* Footer */
@@ -471,7 +513,7 @@
         <p>Research-backed information to help you understand mental health — for yourself and the people around you. Written for Wyoming teens, useful for everyone.</p>
         <div class="disclaimer-banner">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-            <span><strong>Educational only.</strong> This page cannot diagnose or treat anyone.</span>
+            <span><strong>Educational only.</strong> This page offers guidance, not diagnosis or treatment.</span>
         </div>
     </header>
 
@@ -497,56 +539,67 @@
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
             </div>
             <h2>Understanding Depression</h2>
-            <p class="section-intro">Depression is a real health condition — not a personal weakness, and not something you can just "snap out of."</p>
+            <p class="section-intro">Depression is a real health condition — not a personal weakness, and not something you can just "snap out of." Understanding what it looks like is the first step toward getting help.</p>
 
             <div class="content-block">
                 <h3>What Depression Actually Is</h3>
                 <p>Depression is a mental health condition where sadness, emptiness, or irritability lasts most of the day, nearly every day, and causes real distress or makes it hard to function in daily life — at school, with friends, at home, or in activities you used to enjoy.</p>
-                <p>Normal ups and downs are different. In depression, changes in sleep, appetite, energy, concentration, and self-worth often show up together and persist for <strong>weeks</strong>, not just a few days.</p>
+                <p>Normal ups and downs are different. Everyone has hard days or sad moments. In depression, changes in sleep, appetite, energy, concentration, and self-worth often show up together and persist for <strong>weeks</strong>, not just a few days.</p>
             </div>
 
             <div class="content-block">
-                <h3>How It Looks in Teens</h3>
-                <p>Teen depression doesn't always look like sadness. It can show up as:</p>
+                <h3>How It Can Look in Teens</h3>
+                <p>Teen depression doesn't always look like sadness. It can show up in different ways:</p>
                 <div class="signs-grid">
                     <div class="sign-card">
                         <h4>Mood Changes</h4>
-                        <p>Feeling down, empty, hopeless, or constantly irritable and angry — even over small things.</p>
+                        <p>Feeling down, empty, hopeless, or constantly irritable and angry — even over small things that wouldn't usually bother you.</p>
                     </div>
                     <div class="sign-card">
                         <h4>Losing Interest</h4>
-                        <p>Activities you used to enjoy now feel pointless or exhausting. Nothing sounds fun anymore.</p>
+                        <p>Activities you used to enjoy now feel pointless or exhausting. Nothing sounds fun anymore, even things you once loved.</p>
                     </div>
                     <div class="sign-card">
                         <h4>Physical Signs</h4>
-                        <p>Sleeping too much or too little, appetite changes, unexplained headaches or stomachaches, low energy.</p>
+                        <p>Sleeping too much or too little, appetite changes, unexplained headaches or stomachaches, feeling tired all the time.</p>
                     </div>
                     <div class="sign-card">
                         <h4>Thinking Changes</h4>
-                        <p>Trouble concentrating on schoolwork, very negative self-talk like "I'm a failure" or "Nothing will ever get better."</p>
+                        <p>Trouble concentrating on schoolwork, harsh self-criticism like "I'm worthless" or "Nothing will ever get better."</p>
                     </div>
                 </div>
-                <p>Some teens show more acting out, falling grades, or physical complaints instead of "looking sad." <strong>Thoughts about death or dying always mean it's time to reach out for help</strong>, even if you're not planning to act on them.</p>
+                <p>Some teens show more acting out, falling grades, or physical complaints instead of "looking sad." That's still depression. <strong>Thoughts about death or dying always mean it's time to reach out for help</strong>, even if you're not planning to act on them.</p>
             </div>
 
             <div class="callout callout-wyoming">
                 <h4>Wyoming Connection</h4>
-                <p>Wyoming's high suicide rates mean that untreated or severe depression can be especially dangerous when combined with easy access to lethal means like firearms. Rural distances and weather can make in-person support harder to reach — which is why recognizing early signs and talking to trusted adults sooner is particularly important here.</p>
+                <p>Wyoming's high suicide rates mean that untreated or severe depression can be especially dangerous when combined with easy access to lethal means like firearms. Rural distances and harsh weather can make in-person support harder to reach — which is why recognizing early signs and talking to a trusted adult sooner is particularly important here.</p>
+            </div>
+
+            <div class="callout callout-trusted">
+                <h4>What Makes Someone a "Trusted Adult"?</h4>
+                <p>When we say "trusted adult," we mean someone who creates a safe space for you to share what you're going through. A trusted adult is someone who:</p>
+                <ul>
+                    <li><strong>Listens with empathy</strong> — They try to understand your experience without dismissing your feelings or jumping to judgment</li>
+                    <li><strong>Is trustworthy</strong> — They keep your conversations private (unless your safety is at risk) and follow through on what they say</li>
+                    <li><strong>Helps you feel safe</strong> — You can be honest around them without fear of punishment, embarrassment, or being ignored</li>
+                </ul>
+                <p>This could be a parent, teacher, school counselor, coach, relative, mentor, or another adult in your community. If you're not sure who to talk to, school counselors are trained for exactly this. You don't have to have everything figured out before reaching out.</p>
             </div>
 
             <div class="content-block">
-                <h3>What Helps</h3>
+                <h3>What Can Help</h3>
                 <p>Research supports several approaches for adolescent depression:</p>
                 <ul>
-                    <li><strong>Talk therapy</strong> — Cognitive behavioral therapy (CBT) and interpersonal therapy (IPT) are structured conversations that teach coping skills and address thinking patterns.</li>
-                    <li><strong>Medication</strong> — Sometimes clinicians prescribe antidepressants for moderate to severe depression, with close monitoring for both benefits and potential side effects, especially in the first few weeks. These decisions are made by medical professionals.</li>
+                    <li><strong>Talk therapy</strong> — Approaches like cognitive behavioral therapy (CBT) and interpersonal therapy (IPT) involve structured conversations that teach coping skills and address unhelpful thinking patterns.</li>
+                    <li><strong>Medication</strong> — Sometimes clinicians prescribe antidepressants for moderate to severe depression, with close monitoring for both benefits and potential side effects, especially in the first few weeks. These decisions are made by medical professionals based on your specific situation.</li>
                     <li><strong>Healthy routines</strong> — Regular sleep, physical activity, and staying connected to at least one supportive person can support recovery, but should not replace professional care when symptoms are significant.</li>
                 </ul>
             </div>
 
             <div class="callout callout-important">
                 <h4>Key Takeaway</h4>
-                <p>Depression is common and treatable. About 1 in 5 U.S. teens experiences a major depressive episode each year. If you notice these patterns in yourself or someone else lasting more than a couple weeks, it's time to talk to a trusted adult.</p>
+                <p>Depression is common and treatable. About 1 in 5 U.S. teens experiences a major depressive episode each year. If you notice these patterns in yourself or someone else lasting more than a couple weeks, reaching out to a trusted adult is a sign of strength, not weakness.</p>
             </div>
 
             <div class="next-section">
@@ -562,61 +615,61 @@
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
             </div>
             <h2>Anxiety & Panic</h2>
-            <p class="section-intro">Everyone feels anxious sometimes. It becomes a problem when worry or fear is so strong that it interferes with daily life.</p>
+            <p class="section-intro">Everyone feels anxious sometimes — it's part of being human. It becomes a problem when worry or fear is so strong that it gets in the way of daily life.</p>
 
             <div class="content-block">
                 <h3>Normal Anxiety vs. Anxiety Disorders</h3>
-                <p>Anxiety is part of everyone's life — it can actually help you prepare for challenges. It becomes a <strong>disorder</strong> when worry, fear, or physical symptoms are:</p>
+                <p>Anxiety is part of everyone's life — it can actually help you prepare for challenges like tests or performances. It becomes a <strong>disorder</strong> when worry, fear, or physical symptoms are:</p>
                 <ul>
-                    <li>Very strong or intense</li>
-                    <li>Happening frequently (most days)</li>
-                    <li>Interfering with school, friendships, or daily activities</li>
+                    <li>Very strong or intense — out of proportion to the situation</li>
+                    <li>Happening frequently (most days, over weeks)</li>
+                    <li>Interfering with school, friendships, or activities you care about</li>
                 </ul>
-                <p>Common anxiety problems in teens include generalized anxiety (chronic worry about many things), social anxiety (fear of being judged), and panic attacks.</p>
+                <p>Common anxiety problems in teens include generalized anxiety (chronic worry about many things), social anxiety (fear of being judged or embarrassed), and panic attacks (sudden surges of intense fear).</p>
             </div>
 
             <div class="content-block">
-                <h3>How Anxiety Shows Up</h3>
+                <h3>How Anxiety Can Show Up</h3>
                 <div class="signs-grid">
                     <div class="sign-card">
                         <h4>Mental Signs</h4>
-                        <p>Constant worry, feeling on edge, trouble concentrating, expecting the worst to happen.</p>
+                        <p>Constant worry, feeling on edge, trouble concentrating, expecting the worst to happen, racing thoughts.</p>
                     </div>
                     <div class="sign-card">
                         <h4>Physical Signs</h4>
-                        <p>Racing heart, shortness of breath, sweating, shaky hands, stomachaches, muscle tension.</p>
+                        <p>Racing heart, shortness of breath, sweating, shaky hands, stomachaches, muscle tension, headaches.</p>
                     </div>
                     <div class="sign-card">
                         <h4>Behavioral Signs</h4>
-                        <p>Avoiding situations that make you anxious, needing constant reassurance, trouble sleeping.</p>
+                        <p>Avoiding situations that make you anxious, needing constant reassurance, trouble sleeping, skipping activities.</p>
                     </div>
                 </div>
-                <p>Some teens visit school nurses or doctors frequently for physical symptoms without an obvious medical cause — this can be a sign of underlying anxiety.</p>
+                <p>Some teens visit school nurses or doctors frequently for physical symptoms without an obvious medical cause — this can sometimes be a sign of underlying anxiety.</p>
             </div>
 
             <div class="content-block">
                 <h3>What Panic Attacks Feel Like</h3>
-                <p>A panic attack is a sudden surge of intense fear that peaks within minutes. Symptoms often include:</p>
+                <p>A panic attack is a sudden surge of intense fear that peaks within minutes. It can feel overwhelming and sometimes even terrifying. Symptoms often include:</p>
                 <ul>
                     <li>Racing heart, chest pain, or shortness of breath</li>
-                    <li>Dizziness or feeling "out of control"</li>
+                    <li>Dizziness, tingling, or feeling "out of control"</li>
                     <li>Feeling detached from yourself or your surroundings</li>
                     <li>Fear that you're having a heart attack or "going crazy"</li>
                 </ul>
-                <p>Panic attacks are very uncomfortable but are usually not physically dangerous. However, if you've never had one evaluated, it's worth seeing a doctor to rule out physical causes like heart problems or thyroid issues.</p>
+                <p>Panic attacks are very uncomfortable but are usually not physically dangerous. If you've never had one evaluated, it's worth seeing a doctor to rule out physical causes like heart problems or thyroid issues — not because panic attacks aren't real, but because ruling out other conditions helps you get the right support.</p>
             </div>
 
             <div class="callout callout-wyoming">
                 <h4>Wyoming Connection</h4>
-                <p>Long travel distances to school, sports, or healthcare, severe weather, and small tight-knit communities can amplify school and social anxieties for Wyoming teens. In remote areas with limited immediate medical access, panic symptoms can feel especially frightening. Knowing that panic attacks, while uncomfortable, are usually not dangerous can help reduce the fear.</p>
+                <p>Long travel distances to school, sports, or healthcare, severe weather, and small tight-knit communities can amplify anxieties for Wyoming teens. In remote areas with limited immediate medical access, panic symptoms can feel especially frightening. Knowing that panic attacks, while uncomfortable, are usually not dangerous can help reduce the fear.</p>
             </div>
 
             <div class="content-block">
-                <h3>What Helps</h3>
+                <h3>What Can Help</h3>
                 <ul>
-                    <li><strong>Therapy</strong> — CBT and exposure-based approaches help teens gradually face fears in a planned, safe way.</li>
-                    <li><strong>Coping skills</strong> — Slow, steady breathing, grounding techniques, and realistic thinking can make anxiety more manageable.</li>
-                    <li><strong>Support</strong> — Listen without minimizing fears, avoid pressure to "just get over it," and encourage professional help when anxiety affects daily life.</li>
+                    <li><strong>Therapy</strong> — CBT and exposure-based approaches help teens gradually face fears in a planned, safe way with professional support.</li>
+                    <li><strong>Coping skills</strong> — Slow, steady breathing, grounding techniques, and realistic thinking can make anxiety more manageable in the moment.</li>
+                    <li><strong>Support</strong> — Talking to someone who listens without minimizing your fears, avoids pressure to "just get over it," and encourages professional help when anxiety affects daily life.</li>
                 </ul>
             </div>
 
@@ -633,31 +686,31 @@
                 <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
             </div>
             <h2>Isolation & Loneliness</h2>
-            <p class="section-intro">There's a difference between enjoying alone time and feeling painfully disconnected from others.</p>
+            <p class="section-intro">There's a difference between enjoying alone time and feeling painfully disconnected from others. Both are part of life, but one can hurt.</p>
 
             <div class="content-block">
                 <h3>Loneliness vs. Alone Time</h3>
-                <p>Healthy alone time can feel peaceful or productive — you choose it and it recharges you.</p>
-                <p><strong>Loneliness</strong> feels painful, disconnected, or hopeless — even when other people are nearby. When teens start withdrawing from friends, family, and activities they used to enjoy, and this lasts for weeks, it can signal depression, anxiety, or other problems.</p>
+                <p>Healthy alone time can feel peaceful or productive — you choose it and it recharges you. Many people need solitude to think, create, or rest.</p>
+                <p><strong>Loneliness</strong> feels different. It's painful, disconnected, or hopeless — even when other people are nearby. When teens start withdrawing from friends, family, and activities they used to enjoy, and this lasts for weeks, it can signal depression, anxiety, or other challenges that deserve attention.</p>
             </div>
 
             <div class="callout callout-wyoming">
                 <h4>Wyoming Connection</h4>
-                <p>Wyoming teens often face long physical distances between homes, limited public transportation, and weather that makes face-to-face time harder. Small school sizes and tight-knit communities can be strengths — but may also make some teens worry more about fitting in or being judged. These factors can increase isolation even when you're surrounded by people who care.</p>
+                <p>Wyoming teens often face long physical distances between homes, limited public transportation, and weather that makes face-to-face time harder. Small school sizes and tight-knit communities can be real strengths — but may also make some teens worry more about fitting in or being judged. These factors can increase feelings of isolation even when you're surrounded by people who care about you.</p>
             </div>
 
             <div class="content-block">
                 <h3>What Can Help</h3>
                 <ul>
-                    <li><strong>One connection matters</strong> — Research shows that even one trusted adult or peer can make a significant difference.</li>
-                    <li><strong>Online counts too</strong> — Supportive relationships, whether online or offline, are protective.</li>
-                    <li><strong>Join something</strong> — Clubs, teams, cultural groups, or community activities can help build connection, especially when you plan around transportation or weather challenges with adults.</li>
+                    <li><strong>One connection matters</strong> — Research shows that even one trusted adult or peer can make a significant difference in how connected you feel.</li>
+                    <li><strong>Online counts too</strong> — Supportive relationships, whether online or offline, are protective. A friend you text regularly or an online community with shared interests can be meaningful.</li>
+                    <li><strong>Join something</strong> — Clubs, teams, cultural groups, or community activities can help build connection, especially when you plan around transportation or weather challenges with adults who can help.</li>
                 </ul>
             </div>
 
             <div class="callout callout-important">
                 <h4>Key Takeaway</h4>
-                <p>Feeling lonely doesn't mean something is wrong with you. It means you're human and you need connection. Even small steps — texting a friend, joining one activity, talking to one trusted adult — can start to shift the feeling.</p>
+                <p>Feeling lonely doesn't mean something is wrong with you. It means you're human and you need connection — that's universal. Even small steps — texting a friend, joining one activity, talking to one trusted adult — can start to shift the feeling. You don't have to fix everything at once.</p>
             </div>
 
             <div class="next-section">
@@ -677,42 +730,43 @@
 
             <div class="content-block">
                 <h3>What Stigma Is</h3>
-                <p>Stigma includes negative stereotypes, prejudice, and discrimination directed at people with mental health conditions. It can come from others — or from within ourselves.</p>
-                <p>Many teens believe that mental health problems mean someone is <strong>"weak" rather than "sick."</strong> This belief makes people less likely to seek help when they need it.</p>
+                <p>Stigma includes negative stereotypes, prejudice, and discrimination directed at people with mental health conditions. It can come from others — or from within ourselves (called "self-stigma").</p>
+                <p>Many teens believe that mental health problems mean someone is <strong>"weak" rather than "struggling."</strong> This belief makes people less likely to seek help when they need it — and that's the real problem.</p>
             </div>
 
             <div class="content-block">
-                <h3>How Stigma Hurts</h3>
+                <h3>How Stigma Can Hurt</h3>
                 <ul>
                     <li>Hiding symptoms instead of getting help</li>
-                    <li>Avoiding treatment even when it would help</li>
-                    <li>Distancing from peers who are struggling</li>
-                    <li>Lower self-esteem when you believe negative things about yourself</li>
+                    <li>Avoiding treatment even when it would make a real difference</li>
+                    <li>Distancing from peers who are struggling (when they need support most)</li>
+                    <li>Lower self-esteem when you internalize negative beliefs about yourself</li>
                 </ul>
             </div>
 
             <div class="callout callout-wyoming">
                 <h4>Wyoming Connection</h4>
-                <p>Frontier culture values toughness and self-reliance — which can be real strengths. But they can also make it harder for teens to say "I'm struggling and I need help." Local campaigns in Wyoming emphasize that seeking help is a sign of <strong>responsibility</strong>, not weakness. Taking care of your mind is as practical as taking care of your truck.</p>
+                <p>Frontier culture values toughness and self-reliance — which can be real strengths in many situations. But they can also make it harder for teens to say "I'm struggling and I need help." Local campaigns in Wyoming emphasize that seeking help is a sign of <strong>responsibility and courage</strong>, not weakness. Taking care of your mind is as practical as taking care of your body or your truck.</p>
             </div>
 
             <div class="content-block">
                 <h3>What Reduces Stigma</h3>
                 <ul>
-                    <li><strong>Personal contact</strong> — Knowing someone who has dealt with mental health challenges reduces stereotypes.</li>
+                    <li><strong>Personal contact</strong> — Knowing someone who has dealt with mental health challenges reduces stereotypes and builds empathy.</li>
                     <li><strong>Accurate information</strong> — Learning that mental health conditions are common, treatable, and not a character flaw.</li>
-                    <li><strong>Respectful language</strong> — Talking about mental health the same way we talk about physical health.</li>
-                    <li><strong>Normalizing conversations</strong> — Schools and groups that openly discuss mental health see better help-seeking.</li>
+                    <li><strong>Respectful language</strong> — Talking about mental health the same way we talk about physical health, without shame or judgment.</li>
+                    <li><strong>Normalizing conversations</strong> — Schools and groups that openly discuss mental health see better help-seeking and outcomes.</li>
                 </ul>
             </div>
 
             <div class="content-block">
                 <h3>How to Ask for Help</h3>
-                <p>Many teens with mental health needs never receive services — often due to stigma, lack of knowledge, or access issues. Here's a simple script that can help:</p>
+                <p>Many teens with mental health needs never receive services — often due to stigma, lack of knowledge, or access challenges. Starting the conversation can feel hard, but here's a simple approach:</p>
                 <div class="callout callout-important">
                     <h4>Try Saying</h4>
                     <p>"I've been feeling really [down/anxious/stressed] for a few weeks and it's not going away. Can we talk about it?" or "I'm worried about myself. Can you help me find someone to talk to?"</p>
                 </div>
+                <p>You don't need to have all the words or know exactly what's wrong. Just starting the conversation is what matters.</p>
             </div>
 
             <div class="next-section">
@@ -728,7 +782,7 @@
                 <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
             </div>
             <h2>Supporting Friends</h2>
-            <p class="section-intro">You can make a real difference for a friend who's struggling — without being their therapist.</p>
+            <p class="section-intro">You can make a real difference for a friend who's struggling — without being their therapist or carrying the whole burden yourself.</p>
 
             <div class="content-block">
                 <h3>What Helps</h3>
@@ -739,15 +793,15 @@
                     </div>
                     <div class="sign-card">
                         <h4>Validate</h4>
-                        <p>"That sounds really hard." Don't minimize with "others have it worse" or "just cheer up."</p>
+                        <p>"That sounds really hard." Don't minimize with "others have it worse" or "just cheer up." Their feelings are real.</p>
                     </div>
                     <div class="sign-card">
                         <h4>Stay Present</h4>
-                        <p>If someone is very distressed, stay with them. Your calm presence matters.</p>
+                        <p>If someone is very distressed, stay with them. Your calm, steady presence matters more than having perfect words.</p>
                     </div>
                     <div class="sign-card">
                         <h4>Encourage Help</h4>
-                        <p>Gently encourage them to talk to a trusted adult or professional. Offer to go with them.</p>
+                        <p>Gently encourage them to talk to a trusted adult or professional. Offer to go with them if that would help.</p>
                     </div>
                 </div>
             </div>
@@ -756,8 +810,8 @@
                 <h3>What Doesn't Help</h3>
                 <ul>
                     <li>Saying "just get over it" or "you have nothing to be sad about"</li>
-                    <li>Comparing their problems to others'</li>
-                    <li>Trying to be their therapist or sole support system</li>
+                    <li>Comparing their problems to others' ("at least you're not...")</li>
+                    <li>Trying to be their therapist or sole support system — that's too much for anyone</li>
                     <li>Promising to keep serious safety concerns secret</li>
                 </ul>
             </div>
@@ -765,15 +819,17 @@
             <div class="callout callout-crisis">
                 <h4>Important: When to Get Adults Involved</h4>
                 <p>If a friend talks about wanting to die, hurting themselves, or if you're genuinely worried about their safety — <strong>you need to involve an adult</strong>, even if your friend asks you not to. Their life matters more than temporary anger. You can say: "I care about you too much to keep this to myself. I'm going to help you get help."</p>
+                <p style="margin-top: 1rem;">You can also report anonymously through <a href="https://www.safe2tellwy.org" target="_blank" rel="noopener">Safe2Tell Wyoming</a> if you're worried about someone at school.</p>
             </div>
 
             <div class="content-block">
                 <h3>Taking Care of Yourself Too</h3>
-                <p>Supporting a struggling friend can be heavy. Remember:</p>
+                <p>Supporting a struggling friend can be heavy. It's important to remember:</p>
                 <ul>
-                    <li>You are not responsible for fixing them</li>
-                    <li>It's okay to have boundaries</li>
+                    <li>You are not responsible for fixing them — that's not your job</li>
+                    <li>It's okay to have boundaries and limits</li>
                     <li>You deserve support too — talk to a trusted adult about how you're feeling</li>
+                    <li>Getting adults involved isn't betraying your friend — it's helping them get what they really need</li>
                 </ul>
             </div>
 
@@ -788,33 +844,32 @@
         <div class="content-container">
             <div class="callout callout-crisis" style="margin-top: 0; margin-bottom: 2rem;">
                 <h4>If You're Thinking About Suicide Right Now</h4>
-                <p>Please reach out. Call or text <strong><a href="tel:988">988</a></strong> to talk to someone who can help. You don't have to face this alone.</p>
+                <p>Please reach out. Call or text <strong><a href="tel:988">988</a></strong> to talk to someone who can help. You don't have to face this alone, and you don't have to have everything figured out to call.</p>
             </div>
 
             <div class="section-icon suicide">
                 <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
             </div>
             <h2>Suicide Awareness</h2>
-            <p class="section-intro">Talking about suicide doesn't cause it. Understanding warning signs and knowing how to respond can save lives.</p>
+            <p class="section-intro">Talking about suicide doesn't cause it — research is clear on this. Understanding warning signs and knowing how to respond can save lives.</p>
 
             <div class="content-block">
                 <h3>Why This Matters</h3>
                 <p>Suicide is a leading cause of death among adolescents and young adults. Wyoming's suicide rate is consistently among the highest in the nation, with firearms accounting for about 72% of deaths.</p>
-                <p>But suicide is <strong>preventable</strong>. Most people who are suicidal don't want to die — they want the pain to stop. With help, the crisis can pass.</p>
+                <p>But suicide is <strong>preventable</strong>. Most people who are suicidal don't want to die — they want the pain to stop. With the right help, the crisis can pass and things can get better.</p>
             </div>
 
             <div class="content-block">
                 <h3>Warning Signs</h3>
-                <p>Watch for these changes, especially if several happen together:</p>
+                <p>Watch for these changes, especially if several happen together or represent a significant change from someone's usual behavior:</p>
                 <ul>
-                    <li>Talking or writing about wanting to die or feeling hopeless</li>
+                    <li>Talking or writing about wanting to die, feeling hopeless, or having no reason to live</li>
                     <li>Saying things like "I'm a burden" or "Everyone would be better off without me"</li>
                     <li>Withdrawing from friends, family, and activities</li>
                     <li>Major mood changes — including sudden calmness after a period of depression</li>
                     <li>Giving away belongings or saying goodbye to people as if they won't see them again</li>
                     <li>Increased use of alcohol or drugs</li>
                     <li>Researching ways to die or searching online for suicide methods</li>
-                    <li>Looking for access to lethal means</li>
                 </ul>
             </div>
 
@@ -823,44 +878,45 @@
                 <div class="signs-grid">
                     <div class="sign-card">
                         <h4>Risk Factors</h4>
-                        <p>Depression, substance use, previous self-harm, trauma, bullying, discrimination, access to lethal means, feeling like a burden.</p>
+                        <p>Depression, substance use, previous self-harm, trauma, bullying, discrimination, access to lethal means, feeling like a burden, recent loss or crisis.</p>
                     </div>
                     <div class="sign-card">
                         <h4>Protective Factors</h4>
-                        <p>Strong family/peer support, sense of belonging, cultural/spiritual connection, safe storage of firearms and medications, access to mental health care.</p>
+                        <p>Strong family and peer support, sense of belonging, cultural or spiritual connection, safe storage of firearms and medications, access to mental health care.</p>
                     </div>
                 </div>
             </div>
 
             <div class="callout callout-wyoming">
                 <h4>Wyoming Connection</h4>
-                <p>High firearm ownership and long distances to hospitals or crisis centers make <strong>means safety</strong> especially important in Wyoming. If you're worried about someone, temporarily removing access to firearms and medications during a crisis can save lives.</p>
-                <p><strong>For adults:</strong> Secure guns in locked safes with ammunition stored separately. Remove or lock up medications. These steps buy time for a crisis to pass — and can be the difference between life and death.</p>
+                <p>High firearm ownership and long distances to hospitals or crisis centers make <strong>means safety</strong> especially important in Wyoming. If someone is in crisis, reducing access to lethal means can buy time for the crisis to pass.</p>
+                <p>Practical steps: Secure guns in locked safes with ammunition stored separately. Remove or lock up medications. These steps save lives by creating time and space for help to arrive. Community values of looking out for neighbors can support prevention when people feel safe speaking up.</p>
             </div>
 
             <div class="content-block">
                 <h3>How to Respond</h3>
-                <p><strong>It is safe to ask directly</strong> if someone is thinking about suicide. Research shows that asking does not "put the idea in someone's head" — it opens the door for them to get help.</p>
+                <p><strong>It is safe to ask directly</strong> if someone is thinking about suicide. Research consistently shows that asking does not "put the idea in someone's head" — it opens the door for them to talk and get help.</p>
                 <p>If someone is at immediate risk:</p>
                 <ol>
                     <li><strong>Stay with them</strong> — Don't leave them alone</li>
                     <li><strong>Remove access to lethal means</strong> if possible and safe to do</li>
                     <li><strong>Get help</strong> — Call 988, text 741741, or contact emergency services</li>
-                    <li><strong>Don't promise secrecy</strong> — Their life matters more</li>
+                    <li><strong>Don't promise secrecy</strong> — Their life matters more than a promise</li>
                 </ol>
             </div>
 
             <div class="crisis-box">
                 <h3>Crisis Resources</h3>
                 <p>If you or someone you know needs help now:</p>
-                <div class="number">988</div>
+                <div class="number"><a href="tel:988">988</a></div>
                 <p class="subtitle">Suicide & Crisis Lifeline — Call or Text 24/7</p>
                 <p style="margin-top: 1rem; font-size: 1rem;">Crisis Text Line: Text HOME to <strong>741741</strong></p>
+                <p style="margin-top: 0.5rem; font-size: 1rem;"><a href="https://www.safe2tellwy.org" target="_blank" rel="noopener" style="color: white;">Safe2Tell Wyoming</a> — Anonymous reporting</p>
             </div>
 
             <div class="callout callout-important">
                 <h4>Remember</h4>
-                <p>You don't have to handle this alone. If you're worried about someone, tell a trusted adult. If you're struggling yourself, please reach out. Help is available, and you deserve it.</p>
+                <p>You don't have to handle this alone. If you're worried about someone, tell a trusted adult. If you're struggling yourself, please reach out. Help is available, and you deserve it. Things can get better.</p>
             </div>
         </div>
     </section>
@@ -885,9 +941,10 @@
                 <a href="learn.html">Learn</a>
                 <a href="index.html#resources">Get Help</a>
                 <a href="https://screening.mhanational.org/screening-tools/" target="_blank" rel="noopener">MHA Screening</a>
+                <a href="https://www.safe2tellwy.org" target="_blank" rel="noopener">Safe2Tell WY</a>
             </div>
             <div class="footer-disclaimer">
-                <strong>Educational Resource:</strong> This site provides mental health education only. It cannot diagnose or treat. If you are in immediate danger or thinking about suicide, contact <strong>988</strong> or emergency services now.<br><br>
+                <strong>Educational Resource:</strong> This site provides mental health education and guidance only. It cannot diagnose or treat. If you are in immediate danger or thinking about suicide, contact <strong>988</strong> or emergency services now.<br><br>
                 © 2025 WYMind · Built by a Wyoming student · Not a substitute for professional care
             </div>
         </div>
