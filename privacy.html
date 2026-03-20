@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Compliance | WYMind</title>
+    <meta name="description" content="WYMind privacy policy, FERPA and COPPA compliance, terms of service, and research sources for educators and administrators.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #6B9BC3;
+            --sky-light: #A3C4E0;
+            --sage: #7D9B76;
+            --sage-dark: #5A7254;
+            --prairie: #C9B896;
+            --earth: #8B7355;
+            --cream: #F7F5F0;
+            --cream-dark: #EBE8E0;
+            --night: #2D3436;
+            --night-light: #4A5254;
+            --rust: #C17B5E;
+            --rust-dark: #A65D40;
+            --crisis-red: #DC3545;
+            --text-primary: #2D3436;
+            --text-secondary: #636E72;
+            --border-light: rgba(45, 52, 54, 0.08);
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+            --shadow-soft: 0 4px 20px rgba(45, 52, 54, 0.06);
+            --shadow-medium: 0 8px 30px rgba(45, 52, 54, 0.1);
+            --shadow-strong: 0 12px 40px rgba(45, 52, 54, 0.14);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--cream); color: var(--text-primary); line-height: 1.75; font-size: 18px; }
+
+        /* Navigation */
+        .navbar { position: fixed; top: 0; left: 0; right: 0; padding: 1.1rem 2rem; background: rgba(247, 245, 240, 0.97); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid var(--border-light); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--night); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo-mark { width: 48px; height: 48px; background: linear-gradient(135deg, var(--sage) 0%, var(--sky-blue) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        .logo-mark::after { content: 'WY'; font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: white; }
+        .nav-links { display: flex; gap: 0.5rem; list-style: none; align-items: center; }
+        .nav-links a { font-size: 1.05rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; padding: 0.65rem 1.1rem; border-radius: var(--radius-sm); transition: var(--transition); }
+        .nav-links a:hover { color: var(--text-primary); background: var(--cream-dark); }
+        .nav-links a.active { color: var(--sage-dark); background: rgba(125, 155, 118, 0.15); }
+        .nav-links a.nav-cta { background: var(--rust); color: white; font-weight: 600; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .mobile-menu-btn span { display: block; width: 26px; height: 3px; background: var(--night); margin: 5px 0; border-radius: 2px; }
+
+        /* Page Header */
+        .page-header {
+            padding: 9rem 2rem 4rem;
+            background: linear-gradient(180deg, white 0%, var(--cream) 100%);
+            text-align: center;
+        }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.25rem, 5vw, 3rem);
+            color: var(--night);
+            margin-bottom: 1rem;
+        }
+        .page-header .subtitle {
+            font-size: 1.35rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Mission Banner */
+        .mission-banner {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+        .mission-banner h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: white;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .mission-banner .mission-text {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            color: white;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.3;
+        }
+        .mission-banner .mission-note {
+            font-size: 1.1rem;
+            color: white;
+            opacity: 0.85;
+            margin-top: 1.25rem;
+        }
+
+        /* Content Container */
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section */
+        .policy-section {
+            margin-bottom: 4rem;
+        }
+        .policy-section:last-child { margin-bottom: 0; }
+        .policy-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.85rem;
+            color: var(--night);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--sage);
+            display: inline-block;
+        }
+        .policy-section h3 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            color: var(--night);
+            margin: 2rem 0 1rem;
+        }
+        .policy-section p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+        }
+        .policy-section ul {
+            margin: 1rem 0 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .policy-section li {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+        .policy-section li strong {
+            color: var(--night);
+        }
+
+        /* Compliance Cards */
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .compliance-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            border: 2px solid var(--border-light);
+            transition: var(--transition);
+        }
+        .compliance-card:hover {
+            border-color: var(--sage);
+            box-shadow: var(--shadow-medium);
+        }
+        .compliance-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            color: var(--sage-dark);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .compliance-card h4 svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--sage);
+        }
+        .compliance-card p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        /* Key Points Box */
+        .key-points {
+            background: linear-gradient(135deg, rgba(107, 155, 195, 0.1) 0%, rgba(125, 155, 118, 0.1) 100%);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border: 2px solid rgba(125, 155, 118, 0.2);
+        }
+        .key-points h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--sage-dark);
+            margin: 0 0 1.25rem;
+        }
+        .key-points ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .key-points li {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.65rem;
+            line-height: 1.65;
+        }
+        .key-points li::marker {
+            color: var(--sage);
+        }
+
+        /* Sources Section */
+        .sources-section {
+            background: white;
+            padding: 4rem 2rem;
+            border-top: 2px solid var(--border-light);
+        }
+        .sources-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .sources-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.85rem;
+            color: var(--night);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .sources-intro {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sources-category {
+            margin-bottom: 2.5rem;
+        }
+        .sources-category h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--sage-dark);
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid var(--sage);
+        }
+        .sources-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sources-list li {
+            background: var(--cream);
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            transition: var(--transition);
+        }
+        .sources-list li:hover {
+            background: var(--cream-dark);
+        }
+        .sources-list .source-org {
+            font-weight: 600;
+            color: var(--night);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--night);
+            color: white;
+            padding: 4rem 2rem 3rem;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .footer-brand { display: flex; align-items: center; gap: 0.85rem; }
+        .footer-brand .logo-mark { width: 44px; height: 44px; }
+        .footer-brand span { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
+        .footer-links { display: flex; gap: 2.75rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--sky-light); text-decoration: none; font-size: 1.1rem; }
+        .footer-links a:hover { color: white; }
+        .footer-disclaimer {
+            width: 100%;
+            text-align: center;
+            padding-top: 2.75rem;
+            margin-top: 1.75rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.05rem;
+            color: var(--sky-light);
+            line-height: 1.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body { font-size: 17px; }
+            .navbar { padding: 1rem 1.5rem; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); flex-direction: column; padding: 1.5rem; gap: 0.5rem; box-shadow: var(--shadow-medium); }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .page-header { padding: 8rem 1.5rem 3rem; }
+            .page-header h1 { font-size: 2rem; }
+            .content-container { padding: 3rem 1.5rem; }
+            .policy-section h2 { font-size: 1.5rem; }
+            .compliance-grid { grid-template-columns: 1fr; }
+            .footer-container { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark"></div>
+                WYMind
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="index.html#resources">Get Help</a></li>
+                <li><a href="privacy.html" class="active">Privacy & Compliance</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Privacy, Compliance & Sources</h1>
+        <p class="subtitle">Information for educators, administrators, and parents about WYMind's commitment to student safety, privacy, and research-backed content.</p>
+    </header>
+
+    <!-- Mission Banner -->
+    <section class="mission-banner">
+        <h2>Our Mission</h2>
+        <p class="mission-text">"To improve mental health literacy rates at Kelly Walsh High School by 25%"</p>
+        <p class="mission-note">A student-built initiative for Wyoming adolescents</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        
+        <!-- Terms of Service -->
+        <section class="policy-section" id="terms">
+            <h2>Terms of Service</h2>
+            
+            <h3>What WYMind Is</h3>
+            <p>WYMind is a <strong>student-built educational platform</strong> designed to improve mental health literacy among Wyoming adolescents. Our purpose is to help young people understand mental health topics, recognize signs of common conditions, support their peers, and know when and how to seek professional help.</p>
+            
+            <h3>What WYMind Is Not</h3>
+            <p>WYMind is <strong>not a clinical tool</strong>. We do not diagnose mental health conditions, provide treatment recommendations, or replace professional mental health services. The information on this site is educational in nature and intended to be a starting point for understanding — not a substitute for consultation with qualified mental health professionals.</p>
+
+            <div class="key-points">
+                <h3>Key Terms</h3>
+                <ul>
+                    <li><strong>Educational Purpose Only:</strong> All content is designed for mental health literacy, not diagnosis or treatment</li>
+                    <li><strong>Guidance, Not Answers:</strong> We provide information to help users understand their experiences and have better conversations with trusted adults — we do not provide definitive clinical conclusions</li>
+                    <li><strong>Professional Help:</strong> We consistently encourage users to speak with school counselors, mental health professionals, or trusted adults for personalized support</li>
+                    <li><strong>Crisis Resources:</strong> We prominently display crisis resources (988, Crisis Text Line) throughout the site for anyone who needs immediate help</li>
+                    <li><strong>No Liability:</strong> WYMind and its creator(s) are not liable for decisions made based on the educational content provided</li>
+                </ul>
+            </div>
+
+            <h3>Trusted Adult Integration</h3>
+            <p>WYMind is designed to work alongside — not replace — the adults in a student's life. Throughout our content, we encourage users to connect with trusted adults such as parents, teachers, school counselors, coaches, and mentors. We believe that mental health literacy is most effective when it supports, rather than bypasses, existing support systems.</p>
+        </section>
+
+        <!-- Privacy Policy -->
+        <section class="policy-section" id="privacy">
+            <h2>Privacy Policy</h2>
+            
+            <h3>Zero Data Collection</h3>
+            <p>WYMind is committed to student privacy. Our site operates with a <strong>zero data collection</strong> policy:</p>
+            <ul>
+                <li>We do not require user accounts or logins</li>
+                <li>We do not collect, store, or transmit any personal information</li>
+                <li>We do not use cookies for tracking purposes</li>
+                <li>We do not collect IP addresses or device information</li>
+                <li>We do not share any data with third parties</li>
+                <li>We do not use analytics that identify individual users</li>
+            </ul>
+            <p>Users can access all content anonymously. There is nothing to delete because we never collect anything in the first place.</p>
+        </section>
+
+        <!-- Compliance Section -->
+        <section class="policy-section" id="compliance">
+            <h2>Regulatory Compliance</h2>
+            <p>WYMind is designed to meet or exceed the requirements of federal student privacy regulations:</p>
+
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <h4>
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        FERPA Compliant
+                    </h4>
+                    <p>The Family Educational Rights and Privacy Act protects student education records. Because WYMind collects no student data whatsoever, there are no education records to protect — we are compliant by design.</p>
+                </div>
+                <div class="compliance-card">
+                    <h4>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        COPPA Compliant
+                    </h4>
+                    <p>The Children's Online Privacy Protection Act requires parental consent before collecting personal information from children under 13. Because WYMind collects no personal information from users of any age, COPPA requirements are automatically satisfied.</p>
+                </div>
+            </div>
+
+            <h3>School Adoption Readiness</h3>
+            <p>WYMind was designed with school adoption in mind. Administrators and IT departments can deploy WYMind knowing that:</p>
+            <ul>
+                <li>No student data is collected, stored, or at risk</li>
+                <li>No parental consent forms are required for data collection (because there is none)</li>
+                <li>No integration with student information systems is needed</li>
+                <li>The site can be accessed on school networks without privacy concerns</li>
+                <li>All external links (MHA screening, crisis resources) go to established, reputable organizations</li>
+            </ul>
+        </section>
+
+        <!-- About the Creator -->
+        <section class="policy-section" id="about">
+            <h2>About WYMind</h2>
+            <p>WYMind was created by a high school student at Kelly Walsh High School in Casper, Wyoming. The project grew from a recognition that Wyoming faces unique mental health challenges — including one of the highest suicide rates in the nation — and that many adolescents lack basic mental health literacy.</p>
+            <p>This is not a commercial product. WYMind is a student initiative built to serve the community. The creator has no financial interest in the site and receives no compensation for its use.</p>
+            <p>The project has been reviewed by school counselors and is designed to complement, not replace, existing school mental health resources and SEL curriculum.</p>
+        </section>
+
+    </div>
+
+    <!-- Sources Section -->
+    <section class="sources-section" id="sources">
+        <div class="sources-container">
+            <h2>Research Sources</h2>
+            <p class="sources-intro">All content on WYMind is based on peer-reviewed research, government health data, and established mental health organizations. Below are the primary sources used.</p>
+
+            <div class="sources-category">
+                <h3>Federal Health Institutions</h3>
+                <ul class="sources-list">
+                    <li><span class="source-org">National Institute of Mental Health (NIMH)</span> — Major Depression: Prevalence, symptoms, and treatment information</li>
+                    <li><span class="source-org">National Institute of Mental Health (NIMH)</span> — Any Anxiety Disorder: Diagnostic criteria and adolescent-specific data</li>
+                    <li><span class="source-org">National Institute of Mental Health (NIMH)</span> — Generalized Anxiety Disorder: Clinical definitions and treatment approaches</li>
+                    <li><span class="source-org">NCBI Bookshelf</span> — Child and Adolescent Mental Health (2022 National Healthcare Quality and Disparities Report)</li>
+                    <li><span class="source-org">CDC</span> — Data and Statistics on Children's Mental Health</li>
+                    <li><span class="source-org">SAMHSA</span> — Behavioral Health Barometer: Wyoming, Volume 4</li>
+                </ul>
+            </div>
+
+            <div class="sources-category">
+                <h3>Peer-Reviewed Research (PMC/PubMed)</h3>
+                <ul class="sources-list">
+                    <li><span class="source-org">PMC</span> — Depression, Anxiety, and Suicide Among Adolescents: Sex Differences and Future Perspectives</li>
+                    <li><span class="source-org">PMC</span> — 'Me' vs. 'Them': How Mental Illness Stigma Influences Adolescent Help-Seeking Behaviors for Oneself and Recommendations for Peers</li>
+                    <li><span class="source-org">PMC</span> — Contributing Factors to the Rise in Adolescent Anxiety and Associated Mental Health Disorders: A Narrative Review</li>
+                    <li><span class="source-org">PMC</span> — Adolescent Endorsement of the "Weak-Not-Sick" Stereotype for Generalised Anxiety Disorder: Associations with Prejudice, Discrimination, and Help-Giving Intentions toward Peers</li>
+                </ul>
+            </div>
+
+            <div class="sources-category">
+                <h3>Wyoming-Specific Data</h3>
+                <ul class="sources-list">
+                    <li><span class="source-org">Wyoming Department of Health</span> — 2024 Deaths, Births, Marriages and Divorces statistics</li>
+                    <li><span class="source-org">Wyoming Department of Health</span> — Adolescent and Young Adult Suicide and Self Harm in Wyoming</li>
+                    <li><span class="source-org">The Trevor Project</span> — Wyoming State Report 2024: LGBTQ+ Youth Mental Health</li>
+                    <li><span class="source-org">Wyoming Community Data</span> — Understanding Mental Health Challenges in Wyoming: Statistics on Marginalized Groups and Suicide Rates</li>
+                    <li><span class="source-org">ADHD Advisor</span> — Wyoming Ranks #2 in Mental Health Care Deserts</li>
+                </ul>
+            </div>
+
+            <div class="sources-category">
+                <h3>Clinical & Educational Resources</h3>
+                <ul class="sources-list">
+                    <li><span class="source-org">Mayo Clinic</span> — Teen Depression: Symptoms and Causes</li>
+                    <li><span class="source-org">Crown Adolescent Health</span> — Understanding the Rise in Teen Anxiety and Depression</li>
+                    <li><span class="source-org">Community Health Initiative</span> — Wyoming and Idaho Neighbors, Let's Talk Mental Health in Our Communities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-mark"></div>
+                <span>WYMind</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="learn.html">Learn</a>
+                <a href="index.html#resources">Get Help</a>
+                <a href="privacy.html">Privacy & Compliance</a>
+            </div>
+            <div class="footer-disclaimer">
+                <strong>Educational Resource:</strong> This site provides mental health education only. It cannot diagnose or treat. If you are in immediate danger or thinking about suicide, contact <strong>988</strong> or emergency services now.<br><br>
+                © 2025 WYMind · Built by a Wyoming student · Not a substitute for professional care
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
