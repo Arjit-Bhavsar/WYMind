@@ -278,9 +278,192 @@ export default MyApp;
             .footer-container { flex-direction: column; text-align: center; }
             .footer-links { justify-content: center; }
         }
+                    /* Terms Modal Overlay */
+            .terms-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(45, 52, 54, 0.85);
+                backdrop-filter: blur(8px);
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                opacity: 1;
+                transition: opacity 0.4s ease;
+            }
+            .terms-overlay.hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+            .terms-modal {
+                background: white;
+                border-radius: var(--radius-lg);
+                max-width: 580px;
+                width: 100%;
+                box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+                transform: translateY(0);
+                transition: transform 0.4s ease;
+            }
+            .terms-overlay.hidden .terms-modal {
+                transform: translateY(30px);
+            }
+            .terms-header {
+                background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+                padding: 2.25rem 2.5rem 2rem;
+                text-align: center;
+            }
+            .terms-logo {
+                width: 64px;
+                height: 64px;
+                background: white;
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1.25rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            }
+            .terms-logo::after {
+                content: 'WY';
+                font-family: var(--font-display);
+                font-size: 1.35rem;
+                font-weight: 700;
+                background: linear-gradient(135deg, var(--sage) 0%, var(--sky-blue) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .terms-header h2 {
+                font-family: var(--font-display);
+                font-size: 1.65rem;
+                color: white;
+                margin-bottom: 0.35rem;
+                font-weight: 700;
+            }
+            .terms-header p {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 1.05rem;
+            }
+            .terms-content {
+                padding: 2rem 2.5rem 1.5rem;
+            }
+            .terms-content h3 {
+                font-family: var(--font-display);
+                font-size: 1.15rem;
+                color: var(--night);
+                margin-bottom: 0.75rem;
+            }
+            .terms-content p {
+                font-size: 1.05rem;
+                color: var(--text-secondary);
+                line-height: 1.7;
+                margin-bottom: 1.25rem;
+            }
+            .terms-points {
+                background: var(--cream);
+                border-radius: var(--radius-md);
+                padding: 1.25rem 1.5rem;
+                margin: 1.25rem 0;
+            }
+            .terms-points ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .terms-points li {
+                font-size: 1rem;
+                color: var(--text-primary);
+                padding: 0.5rem 0;
+                padding-left: 1.75rem;
+                position: relative;
+                line-height: 1.5;
+            }
+            .terms-points li::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.85rem;
+                width: 8px;
+                height: 8px;
+                background: var(--sage);
+                border-radius: 50%;
+            }
+            .terms-link {
+                display: block;
+                text-align: center;
+                color: var(--sky-blue);
+                font-size: 0.95rem;
+                text-decoration: none;
+                margin-top: 0.5rem;
+                transition: var(--transition);
+            }
+            .terms-link:hover {
+                color: var(--sage-dark);
+                text-decoration: underline;
+            }
+            .terms-footer {
+                padding: 1.25rem 2.5rem 2rem;
+                border-top: 1px solid var(--border-light);
+            }
+            .terms-accept {
+                width: 100%;
+                padding: 1.1rem 2rem;
+                background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+                color: white;
+                border: none;
+                border-radius: var(--radius-sm);
+                font-family: var(--font-body);
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+            .terms-accept:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-medium);
+            }
+            @media (max-width: 768px) {
+                .terms-modal { margin: 1rem; }
+                .terms-header { padding: 1.75rem 1.5rem 1.5rem; }
+                .terms-content { padding: 1.5rem; }
+                .terms-footer { padding: 1rem 1.5rem 1.5rem; }
+            }
     </style>
 </head>
 <body>
+ <!-- Terms of Service Modal -->
+<div class="terms-overlay" id="termsOverlay">
+    <div class="terms-modal">
+        <div class="terms-header">
+            <div class="terms-logo"></div>
+            <h2>Welcome to WYMind</h2>
+            <p>Mental Health Literacy for Wyoming</p>
+        </div>
+        <div class="terms-content">
+            <h3>Before You Continue</h3>
+            <p>WYMind is a <strong>student-built educational platform</strong> created to improve mental health literacy among Wyoming adolescents. We're here to help you understand mental health topics and know when to seek support.</p>
+            
+            <div class="terms-points">
+                <ul>
+                    <li><strong>Educational only</strong> — This site provides guidance and information, not diagnosis or treatment</li>
+                    <li><strong>Not a substitute</strong> — We encourage you to talk to trusted adults and mental health professionals</li>
+                    <li><strong>Your privacy</strong> — We collect zero personal data</li>
+                    <li><strong>Crisis support</strong> — If you're in crisis, call or text <strong>988</strong> anytime</li>
+                </ul>
+            </div>
+            
+            <a href="privacy.html" class="terms-link">Read our full Privacy Policy & Terms →</a>
+        </div>
+        <div class="terms-footer">
+            <button class="terms-accept" onclick="acceptTerms()">I Understand — Continue to WYMind</button>
+        </div>
+    </div>
+</div>
     <!-- Safety Banner -->
     <div class="safety-banner">
         <strong>In crisis or thinking about suicide?</strong> Call or text <a href="tel:988">988</a> now — free, confidential, 24/7.
@@ -297,6 +480,7 @@ export default MyApp;
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="learn.html">Learn</a></li>
                 <li><a href="#resources">Get Help</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
                 <li><a href="https://screening.mhanational.org/screening-tools/" target="_blank" rel="noopener" class="nav-cta">Take a Screening →</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
@@ -612,6 +796,21 @@ export default MyApp;
                 }
             });
         });
+             // Check if user has already accepted terms
+        function checkTermsAccepted() {
+            if (sessionStorage.getItem('wymind_terms_accepted') === 'true') {
+                document.getElementById('termsOverlay').classList.add('hidden');
+            }
+        }
+        
+        // Accept terms and hide modal
+        function acceptTerms() {
+            sessionStorage.setItem('wymind_terms_accepted', 'true');
+            document.getElementById('termsOverlay').classList.add('hidden');
+        }
+        
+        // Run on page load
+        checkTermsAccepted();
     </script>
  <script defer src="/_vercel/insights/script.js"></script>
  <script defer src="/_vercel/speed-insights/script.js"></script>
