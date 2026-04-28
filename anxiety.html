@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety & Coping - WYMind</title>
+    <meta name="description" content="Everyone feels anxious sometimes. It becomes a problem when worry or fear takes over your daily life.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <style>
+        :root{--sky-blue:#6B9BC3;--sky-light:#A3C4E0;--sage:#7D9B76;--sage-dark:#5A7254;--cream:#F7F5F0;--cream-dark:#EBE8E0;--night:#2D3436;--rust:#C17B5E;--crisis-red:#DC3545;--text-primary:#2D3436;--text-secondary:#636E72;--border-light:rgba(45,52,54,0.08);--font-display:'Fraunces',Georgia,serif;--font-body:'Outfit',-apple-system,sans-serif;--shadow-medium:0 8px 30px rgba(45,52,54,0.1);--radius-sm:8px;--radius-md:16px;--space-xs:0.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--transition:all 0.3s ease}
+        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);background:var(--cream);color:var(--text-primary);line-height:1.7;font-size:17px}
+        .scroll-progress{position:fixed;top:0;left:0;right:0;height:4px;z-index:1001;background:var(--cream-dark)}.scroll-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--sage),var(--sky-blue));transition:width .15s ease-out}
+        .navbar{position:fixed;top:4px;left:0;right:0;padding:1rem 2rem;background:rgba(247,245,240,0.97);backdrop-filter:blur(20px);z-index:1000;border-bottom:1px solid var(--border-light)}.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+        .logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--night);text-decoration:none;display:flex;align-items:center;gap:.5rem}.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--sage),var(--sky-blue));border-radius:10px;display:flex;align-items:center;justify-content:center}.logo-mark::after{content:'WY';font-family:var(--font-display);font-size:.75rem;font-weight:700;color:white}
+        .nav-links{display:flex;gap:.25rem;list-style:none;flex-wrap:wrap}.nav-links a{font-size:.95rem;font-weight:500;color:var(--text-secondary);text-decoration:none;padding:.5rem .75rem;border-radius:var(--radius-sm);transition:var(--transition)}.nav-links a:hover{color:var(--text-primary);background:var(--cream-dark)}.nav-links a.active{color:var(--sage-dark);background:rgba(125,155,118,0.15)}
+        .mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:.5rem}.mobile-menu-btn span{display:block;width:24px;height:2px;background:var(--night);margin:5px 0;border-radius:2px}
+        .sticky-help{position:fixed;bottom:24px;right:24px;z-index:1002}.help-btn{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--crisis-red),#B02A37);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(220,53,69,0.4);transition:var(--transition)}.help-btn:hover{transform:scale(1.08)}.help-btn svg{width:26px;height:26px;fill:white}
+        .help-panel{position:absolute;bottom:70px;right:0;background:white;border-radius:var(--radius-md);padding:1.25rem;box-shadow:var(--shadow-medium);width:260px;display:none}.help-panel.show{display:block;animation:fadeUp .2s ease}@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.help-panel h4{font-family:var(--font-display);font-size:1rem;color:var(--crisis-red);margin-bottom:.75rem}.help-panel a{display:block;padding:.6rem .75rem;background:var(--cream);border-radius:var(--radius-sm);text-decoration:none;color:var(--night);font-weight:500;margin-bottom:.4rem;font-size:.9rem}.help-panel a:hover{background:var(--cream-dark)}.help-panel a strong{color:var(--crisis-red)}.help-panel .close-btn{position:absolute;top:.5rem;right:.5rem;background:none;border:none;cursor:pointer;font-size:1.25rem;color:var(--text-secondary)}
+        .module-header{padding:8rem 2rem 3rem;background:linear-gradient(180deg,white,var(--cream));text-align:center}.module-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:600;color:var(--sky-blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:var(--space-sm)}.module-header h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);color:var(--night);margin-bottom:var(--space-sm);line-height:1.2}.module-header .intro{font-size:1.15rem;color:var(--text-secondary);max-width:600px;margin:0 auto}
+        .content-section{max-width:720px;margin:0 auto;padding:var(--space-lg) 2rem var(--space-xl)}
+        .content-block{background:white;border-radius:var(--radius-md);margin-bottom:var(--space-md);border:1px solid var(--border-light);overflow:hidden}.block-header{padding:var(--space-md);cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:var(--transition)}.block-header:hover{background:var(--cream)}.block-header h2{font-family:var(--font-display);font-size:1.25rem;color:var(--night);display:flex;align-items:center;gap:.75rem}.block-header .icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem}.block-header .toggle{width:28px;height:28px;border-radius:50%;background:var(--cream-dark);display:flex;align-items:center;justify-content:center;transition:var(--transition)}.block-header .toggle svg{width:16px;height:16px;fill:var(--text-secondary);transition:var(--transition)}.content-block.open .toggle{background:var(--sage)}.content-block.open .toggle svg{fill:white;transform:rotate(180deg)}.block-content{max-height:0;overflow:hidden;transition:max-height .5s ease}.content-block.open .block-content{max-height:3000px}.block-inner{padding:0 var(--space-md) var(--space-md)}.block-inner p{margin-bottom:var(--space-sm);color:var(--text-primary)}.block-inner p:last-child{margin-bottom:0}.block-inner ul,.block-inner ol{margin:var(--space-sm) 0;padding-left:1.5rem}.block-inner li{margin-bottom:.5rem;line-height:1.65}
+        .teaser{padding:0 var(--space-md) var(--space-sm);color:var(--text-secondary);font-size:.95rem}
+        .signs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-sm);margin:var(--space-sm) 0}.sign-card{background:var(--cream);border-radius:var(--radius-sm);padding:var(--space-sm);text-align:center}.sign-card .icon{font-size:1.5rem;margin-bottom:.25rem}.sign-card p{font-size:.9rem;font-weight:500;color:var(--night);margin:0}
+        .mechanism-box{background:rgba(107,155,195,0.08);border-left:4px solid var(--sky-blue);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:var(--space-sm) var(--space-md);margin:var(--space-md) 0}.mechanism-box summary{font-weight:600;color:var(--sky-blue);cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem}.mechanism-box summary::-webkit-details-marker{display:none}.mechanism-box summary::before{content:'▶';font-size:.7rem;transition:var(--transition)}.mechanism-box[open] summary::before{transform:rotate(90deg)}.mechanism-box .content{margin-top:var(--space-sm);font-size:.95rem;color:var(--text-secondary)}
+        .callout{background:rgba(125,155,118,0.12);border:2px solid var(--sage);border-radius:var(--radius-md);padding:var(--space-md);margin:var(--space-md) 0}.callout h4{font-family:var(--font-display);font-size:1rem;color:var(--sage-dark);margin-bottom:.5rem}.callout p{font-size:.95rem;margin:0}
+        .callout-crisis{background:rgba(220,53,69,0.08);border-color:var(--crisis-red)}.callout-crisis h4{color:var(--crisis-red)}.callout-crisis a{color:var(--crisis-red);font-weight:600}
+        .affirmation{text-align:center;padding:var(--space-md) var(--space-sm);margin:var(--space-sm) 0;opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}.affirmation.visible{opacity:1;transform:translateY(0)}.affirmation p{font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--sage-dark);font-style:italic}.affirmation .aff-icon{display:inline-block;width:32px;height:32px;border-radius:50%;background:rgba(125,155,118,0.15);line-height:32px;text-align:center;font-size:.9rem;margin-bottom:.4rem}
+        .scenario-card{background:white;border:2px solid rgba(107,155,195,0.25);border-radius:var(--radius-md);padding:var(--space-md);margin:var(--space-md) 0}.scenario-card .scenario-label{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--sky-blue);margin-bottom:.5rem}.scenario-card .scenario-prompt{font-size:1rem;font-weight:500;margin-bottom:var(--space-sm);line-height:1.6}
+        .scenario-options{display:flex;flex-direction:column;gap:.5rem}.scenario-option{padding:.75rem 1rem;background:var(--cream);border:2px solid var(--border-light);border-radius:var(--radius-sm);cursor:pointer;font-size:.95rem;transition:var(--transition)}.scenario-option:hover{border-color:var(--sage)}.scenario-option.correct{border-color:var(--sage);background:rgba(125,155,118,0.2)}.scenario-option.incorrect{border-color:var(--rust);background:rgba(193,123,94,0.12)}.scenario-option.disabled{pointer-events:none;opacity:.7}.scenario-option.correct.disabled,.scenario-option.incorrect.disabled{opacity:1}
+        .scenario-feedback{margin-top:var(--space-sm);padding:var(--space-sm);border-radius:var(--radius-sm);font-size:.93rem;display:none;line-height:1.6}.scenario-feedback.show{display:block}.scenario-feedback.correct{background:rgba(125,155,118,0.12);color:var(--sage-dark)}.scenario-feedback.incorrect{background:rgba(193,123,94,0.12);color:var(--rust)}
+        .reflection-box{background:linear-gradient(135deg,rgba(107,155,195,0.1),rgba(125,155,118,0.1));border-radius:var(--radius-md);padding:var(--space-md);margin:var(--space-lg) 0;text-align:center}.reflection-box .icon{font-size:1.75rem;margin-bottom:.5rem}.reflection-box h3{font-family:var(--font-display);font-size:1.1rem;color:var(--night);margin-bottom:.5rem}.reflection-box p{font-size:1rem;color:var(--text-secondary);max-width:500px;margin:0 auto;line-height:1.6}.reflection-box .hint{font-size:.85rem;margin-top:var(--space-sm);font-style:italic}
+        .quiz-block{background:white;border-radius:var(--radius-md);border:2px solid var(--border-light);margin:var(--space-lg) 0;overflow:hidden}.quiz-header{padding:var(--space-md);background:var(--cream-dark);cursor:pointer;display:flex;align-items:center;justify-content:space-between}.quiz-header h3{font-family:var(--font-display);font-size:1.1rem;color:var(--night)}.quiz-content{max-height:0;overflow:hidden;transition:max-height .4s ease}.quiz-block.open .quiz-content{max-height:2400px}.quiz-inner{padding:var(--space-md)}.quiz-question{font-size:1rem;font-weight:500;margin-bottom:var(--space-sm)}.quiz-options{display:flex;flex-direction:column;gap:.5rem}.quiz-option{padding:.75rem 1rem;background:var(--cream);border:2px solid var(--border-light);border-radius:var(--radius-sm);cursor:pointer;font-size:.95rem;transition:var(--transition)}.quiz-option:hover{border-color:var(--sage)}.quiz-option.correct{border-color:var(--sage);background:rgba(125,155,118,0.2)}.quiz-option.incorrect{border-color:var(--rust);background:rgba(193,123,94,0.15)}.quiz-option.disabled{pointer-events:none;opacity:.7}.quiz-option.correct.disabled,.quiz-option.incorrect.disabled{opacity:1}
+        .quiz-counter{text-align:center;margin-bottom:var(--space-md);font-size:.9rem;color:var(--text-secondary)}.quiz-counter strong{color:var(--sage-dark)}.quiz-q-block{margin-bottom:var(--space-lg)}.quiz-q-block:last-of-type{margin-bottom:0}
+        .module-nav{display:flex;justify-content:space-between;align-items:center;padding:var(--space-lg) 0;border-top:1px solid var(--border-light);margin-top:var(--space-lg)}.nav-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;background:white;border:2px solid var(--border-light);border-radius:var(--radius-sm);text-decoration:none;color:var(--night);font-weight:600;font-size:.95rem;transition:var(--transition)}.nav-btn:hover{border-color:var(--sage);background:var(--cream)}.nav-btn.primary{background:var(--sage);border-color:var(--sage);color:white}.nav-btn.primary:hover{background:var(--sage-dark);border-color:var(--sage-dark)}
+        .complete-section{text-align:center;margin:var(--space-lg) 0}.complete-btn{padding:1rem 2rem;background:var(--sage);border:none;border-radius:var(--radius-md);color:white;font-family:var(--font-body);font-size:1rem;font-weight:600;cursor:pointer;transition:var(--transition)}.complete-btn:hover{background:var(--sage-dark);transform:translateY(-2px)}.complete-btn.completed{background:var(--cream-dark);color:var(--text-secondary);cursor:default}.complete-btn.completed:hover{transform:none}
+        .key-term{font-weight:600;color:var(--night);border-bottom:2px solid rgba(107,155,195,0.3)}
+        .crisis-box{background:linear-gradient(135deg,var(--crisis-red),#B02A37);border-radius:var(--radius-md);padding:var(--space-lg);text-align:center;color:white;margin:var(--space-lg) 0}.crisis-box h3{font-family:var(--font-display);font-size:1.5rem;margin-bottom:.5rem}.crisis-box p{font-size:1rem;opacity:.95;margin-bottom:.5rem}.crisis-box .number{font-family:var(--font-display);font-size:3.5rem;font-weight:700}.crisis-box .number a{color:white;text-decoration:none}.crisis-box .subtitle{font-size:1rem;opacity:.9;margin-top:.3rem}
+        @media(max-width:1100px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:1.5rem;gap:.25rem;border-bottom:1px solid var(--border-light);box-shadow:var(--shadow-medium);max-height:70vh;overflow-y:auto}.nav-links.active{display:flex}.nav-links a{font-size:1rem;padding:.6rem 1rem}.mobile-menu-btn{display:block}}@media(max-width:768px){.navbar{padding:.75rem 1rem}.module-header{padding:7rem 1.5rem 2rem}.content-section{padding:var(--space-md) 1.5rem var(--space-lg)}.sticky-help{bottom:16px;right:16px}.help-btn{width:52px;height:52px}.module-nav{flex-direction:column;gap:1rem}.nav-btn{width:100%;justify-content:center}}
+    </style>
+</head>
+<body>
+    <div class="scroll-progress"><div class="scroll-progress-fill" id="scrollProgress"></div></div>
+    <nav class="navbar"><div class="nav-container"><a href="index.html" class="logo"><div class="logo-mark"></div> WYMind</a><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li>
+                <li><a href="depression.html">Depression</a></li>
+                <li><a href="anxiety.html" class="active">Anxiety</a></li>
+                <li><a href="isolation.html">Isolation</a></li>
+                <li><a href="stigma.html">Stigma</a></li>
+                <li><a href="suicide.html">Suicide Awareness</a></li>
+                <li><a href="supporting.html">Supporting Friends</a></li>
+                <li><a href="privacy.html">Privacy</a></li></ul><button class="mobile-menu-btn" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button></div></nav>
+    <div class="sticky-help"><button class="help-btn" onclick="toggleHelp()" aria-label="Get Help Now"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg></button><div class="help-panel" id="helpPanel"><button class="close-btn" onclick="toggleHelp()">&times;</button><h4>You are not alone</h4><a href="tel:988"><strong>988</strong> — Suicide & Crisis Lifeline</a><a href="sms:741741?body=HOME"><strong>Text HOME to 741741</strong> — Crisis Text Line</a><a href="https://www.crisistextline.org/" target="_blank" rel="noopener">More resources →</a></div></div>
+    <header class="module-header"><div class="module-badge">Module 2</div><h1>Anxiety & Coping</h1><p class="intro">Everyone feels anxious sometimes. It becomes a problem when worry or fear takes over your daily life.</p></header>
+    <main class="content-section">
+
+        <div class="content-block open">
+            <div class="block-header" onclick="toggleBlock(this)">
+                <h2><span class="icon" style="background: rgba(116,185,255,0.15);">⚡</span> Normal Worry vs. Anxiety Disorders</h2>
+                <span class="toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></span>
+            </div>
+            <p class="teaser">Anxiety can help you prepare. But when does it cross a line?</p>
+            <div class="block-content"><div class="block-inner">
+                    <p><span class="key-term">Functional worry</span> motivates you and passes. <span class="key-term">Clinical anxiety</span> is persistent, intense, and interferes with school, sleep, or relationships — even without a clear threat.</p>
+                    <p>Common types in teens: <span class="key-term">generalized anxiety</span> (chronic worry about many things), <span class="key-term">social anxiety</span> (fear of being judged), and <span class="key-term">panic disorder</span>.</p>
+                    <details class="mechanism-box"><summary>Why your body reacts this way</summary><div class="content">Anxiety triggers the <span class="key-term">fight-or-flight response</span> — your amygdala releases adrenaline and cortisol. In a disorder, this alarm fires too easily, too often, or too intensely. The physical symptoms are real — your nervous system is preparing for a threat that may not exist.</div></details>
+                    <div class="callout"><h4>Wyoming Connection</h4><p><strong>Long travel distances</strong>, <strong>severe weather</strong>, and <strong>small communities</strong> can amplify social and performance anxieties for Wyoming teens.</p></div></div></div>
+        </div>
+
+        <div class="affirmation" data-observe>
+            <div class="aff-icon">✦</div>
+            <p>Understanding your own anxiety is one of the most powerful things you can learn.</p>
+        </div>
+
+        <div class="scenario-card" id="scenario1">
+            <div class="scenario-label">What would you do?</div>
+            <p class="scenario-prompt">Before a big presentation, Ava says her heart is pounding, her stomach hurts, and she "knows" she’ll embarrass herself. She has a 4.0 GPA. A classmate says she’s overreacting. Who’s seeing this more accurately?</p>
+            <div class="scenario-options">
+                <div class="scenario-option" onclick="handleScenario('scenario1', this, 0)">The classmate — everyone gets nervous before presentations</div>
+                <div class="scenario-option" onclick="handleScenario('scenario1', this, 1)">Ava’s physical symptoms and catastrophic thinking despite strong performance suggest anxiety beyond normal nervousness</div>
+                <div class="scenario-option" onclick="handleScenario('scenario1', this, 2)">Ava probably has a physical illness causing these symptoms</div>
+            </div>
+            <div class="scenario-feedback" id="scenario1Feedback"></div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-header" onclick="toggleBlock(this)">
+                <h2><span class="icon" style="background: rgba(193,123,94,0.15);">🔍</span> How Anxiety Shows Up</h2>
+                <span class="toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></span>
+            </div>
+            <p class="teaser">Anxiety is not just mental — it shows up physically, emotionally, and behaviorally...</p>
+            <div class="block-content"><div class="block-inner">
+                    <div class="signs-grid"><div class="sign-card"><div class="icon">🧠</div><p>Constant worry</p></div><div class="sign-card"><div class="icon">💓</div><p>Racing heart</p></div><div class="sign-card"><div class="icon">😰</div><p>Sweating or shaking</p></div><div class="sign-card"><div class="icon">🤢</div><p>Nausea</p></div><div class="sign-card"><div class="icon">😶</div><p>Avoiding situations</p></div><div class="sign-card"><div class="icon">🌙</div><p>Trouble sleeping</p></div></div>
+                    <p><span class="key-term">Panic attacks</span> are sudden surges of intense fear that peak within minutes. Symptoms include racing heart, chest tightness, and feeling like you’re dying. They are <span class="key-term">physically intense but not life-threatening</span> and typically pass within 10–20 minutes.</p></div></div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-header" onclick="toggleBlock(this)">
+                <h2><span class="icon" style="background: rgba(125,155,118,0.15);">✨</span> What Helps</h2>
+                <span class="toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></span>
+            </div>
+            <p class="teaser">Anxiety is highly treatable...</p>
+            <div class="block-content"><div class="block-inner">
+                    <p><strong>Therapy</strong> — <span class="key-term">CBT</span> and exposure-based approaches help teens face fears gradually and safely.</p>
+                    <p><strong>In the moment</strong> — Slow breathing activates your <span class="key-term">parasympathetic nervous system</span>, directly reducing cortisol and heart rate. This is physiology, not placebo.</p>
+                    <p><strong>From others</strong> — Listen without minimizing. Avoid "just get over it." Encourage professional help when anxiety disrupts daily life.</p></div></div>
+        </div>
+
+
+        <div class="reflection-box"><div class="icon">✎</div><h3>Pause and Reflect</h3><p>Think about a time you felt anxious. Was it functional worry that helped you prepare, or did it feel like something more?</p><p class="hint">There’s no wrong answer. Noticing the difference is what matters.</p></div>
+        <div class="quiz-block" id="quizBlock"><div class="quiz-header" onclick="toggleQuiz()"><h3>📝 Check Your Understanding</h3><span class="toggle"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="currentColor"/></svg></span></div><div class="quiz-content"><div class="quiz-inner"><div class="quiz-counter"><strong id="quizScore">0</strong> of 3 correct</div>
+                    <div class="quiz-q-block">
+                        <p class="quiz-question">1. A student vomits before every exam and can’t sleep for days despite a 98% average. Their friend says "everyone gets nervous." Most accurate assessment?</p>
+                        <div class="quiz-options">
+                            <div class="quiz-option" onclick="handleQuiz('q1', this, 0)">The friend is correct — test anxiety is universal</div>
+                            <div class="quiz-option" onclick="handleQuiz('q1', this, 1)">Physical symptoms disrupting daily life and fear disproportionate to actual performance suggest clinical anxiety</div>
+                            <div class="quiz-option" onclick="handleQuiz('q1', this, 2)">Normal fight-or-flight that will resolve after the exam</div>
+                            <div class="quiz-option" onclick="handleQuiz('q1', this, 3)">The student should practice more positive self-talk</div>
+                        </div>
+                        <div class="scenario-feedback" id="q1Feedback"></div>
+                    </div>
+
+                    <div class="quiz-q-block">
+                        <p class="quiz-question">2. During a panic attack, which statement best reflects clinical reality?</p>
+                        <div class="quiz-options">
+                            <div class="quiz-option" onclick="handleQuiz('q2', this, 0)">Always go to the ER immediately</div>
+                            <div class="quiz-option" onclick="handleQuiz('q2', this, 1)">The fight-or-flight system activates without proportional threat — symptoms are intense but typically not life-threatening and resolve within 10–20 minutes</div>
+                            <div class="quiz-option" onclick="handleQuiz('q2', this, 2)">People can prevent them through willpower</div>
+                            <div class="quiz-option" onclick="handleQuiz('q2', this, 3)">They only happen with diagnosed panic disorder</div>
+                        </div>
+                        <div class="scenario-feedback" id="q2Feedback"></div>
+                    </div>
+
+                    <div class="quiz-q-block">
+                        <p class="quiz-question">3. Why does slow breathing actually reduce anxiety, physiologically?</p>
+                        <div class="quiz-options">
+                            <div class="quiz-option" onclick="handleQuiz('q3', this, 0)">It distracts from anxious thoughts</div>
+                            <div class="quiz-option" onclick="handleQuiz('q3', this, 1)">It activates the parasympathetic nervous system, signaling the brain the threat has passed and reducing cortisol</div>
+                            <div class="quiz-option" onclick="handleQuiz('q3', this, 2)">It increases blood oxygen, automatically eliminating anxiety</div>
+                            <div class="quiz-option" onclick="handleQuiz('q3', this, 3)">It’s a placebo effect</div>
+                        </div>
+                        <div class="scenario-feedback" id="q3Feedback"></div>
+                    </div></div></div></div>
+        <div class="complete-section"><button class="complete-btn" id="completeBtn" onclick="markComplete()">Mark Module Complete</button></div>
+        <nav class="module-nav"><a href="depression.html" class="nav-btn">← Depression</a><a href="isolation.html" class="nav-btn primary">Next: Isolation & Loneliness →</a></nav>
+    </main>
+    <script>
+        let helpOpen=false;const MODULE_NUM=2;let quizScore=0;const quizAnswered={};
+        const scenarioData={
+            scenario1: { correct: 1, rightMsg: "Right. Intense physical symptoms combined with catastrophic thinking that contradicts actual performance is a hallmark of clinical anxiety.", wrongMsg: "Physical symptoms plus disproportionate catastrophic thinking despite strong performance points to clinical anxiety, not normal nervousness." }};
+        const quizData={
+            q1: { correct: 1, rightMsg: "Correct. Physical symptoms disrupting functioning plus disproportionate fear despite evidence of competence points to clinical anxiety.", wrongMsg: "Vomiting, insomnia, and fear disproportionate to a 98% average exceed normal test nervousness — this pattern indicates clinical anxiety." },
+            q2: { correct: 1, rightMsg: "Correct. Panic attacks involve disproportionate fight-or-flight activation. The symptoms are real and terrifying but not dangerous.", wrongMsg: "Panic attacks are the fight-or-flight system misfiring. Intense but not life-threatening, they typically resolve within 10–20 minutes." },
+            q3: { correct: 1, rightMsg: "Correct. Slow breathing activates the parasympathetic nervous system — a measurable mechanism, not placebo.", wrongMsg: "Breathing techniques work by activating the parasympathetic nervous system, which measurably reduces cortisol and heart rate." }};
+        function toggleMobileMenu(){document.getElementById('navLinks').classList.toggle('active')}
+        function toggleHelp(){helpOpen=!helpOpen;document.getElementById('helpPanel').classList.toggle('show',helpOpen)}
+        function toggleBlock(h){h.closest('.content-block').classList.toggle('open')}
+        function toggleQuiz(){document.getElementById('quizBlock').classList.toggle('open')}
+        function handleScenario(id,opt,idx){const c=document.getElementById(id),os=c.querySelectorAll('.scenario-option'),fb=document.getElementById(id+'Feedback'),d=scenarioData[id];os.forEach(o=>{o.classList.remove('selected','correct','incorrect');o.classList.add('disabled')});opt.classList.add('selected');if(idx===d.correct){opt.classList.add('correct');fb.className='scenario-feedback show correct';fb.textContent=d.rightMsg}else{opt.classList.add('incorrect');os[d.correct].classList.add('correct');fb.className='scenario-feedback show incorrect';fb.textContent=d.wrongMsg}}
+        function handleQuiz(qId,opt,idx){if(quizAnswered[qId])return;quizAnswered[qId]=true;const d=quizData[qId],os=opt.closest('.quiz-options').querySelectorAll('.quiz-option'),fb=document.getElementById(qId+'Feedback');os.forEach(o=>o.classList.add('disabled'));opt.classList.add('selected');if(idx===d.correct){opt.classList.add('correct');fb.className='scenario-feedback show correct';fb.textContent=d.rightMsg;quizScore++}else{opt.classList.add('incorrect');os[d.correct].classList.add('correct');fb.className='scenario-feedback show incorrect';fb.textContent=d.wrongMsg}document.getElementById('quizScore').textContent=quizScore}
+        function markComplete(){const b=document.getElementById('completeBtn');let p=JSON.parse(localStorage.getItem('wymind_progress')||'[]');if(!p.includes(MODULE_NUM)){p.push(MODULE_NUM);localStorage.setItem('wymind_progress',JSON.stringify(p))}b.textContent='\u2713 Completed';b.classList.add('completed')}
+        function checkIfCompleted(){const p=JSON.parse(localStorage.getItem('wymind_progress')||'[]');if(p.includes(MODULE_NUM)){const b=document.getElementById('completeBtn');b.textContent='\u2713 Completed';b.classList.add('completed')}}
+        function updateProgress(){const s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('scrollProgress').style.width=(d>0?Math.min((s/d)*100,100):0)+'%'}
+        function initAffirmations(){const o=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:.5});document.querySelectorAll('.affirmation[data-observe]').forEach(el=>o.observe(el))}
+        document.addEventListener('DOMContentLoaded',()=>{checkIfCompleted();initAffirmations()});
+        window.addEventListener('scroll',updateProgress,{passive:true});
+        document.addEventListener('click',e=>{if(helpOpen&&!e.target.closest('.sticky-help'))toggleHelp()});
+    </script>
+</body>
+</html>
