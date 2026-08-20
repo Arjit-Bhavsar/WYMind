@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supporting Friends - WYMind</title>
-    <meta name="description" content="You can make a real difference for someone who’s struggling — without being their therapist.">
+    <meta name="description" content="You can make a real difference for someone who's struggling — without being their therapist.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -22,21 +22,17 @@
         .content-section{max-width:720px;margin:0 auto;padding:var(--space-lg) 2rem var(--space-xl)}
         .content-block{background:white;border-radius:var(--radius-md);margin-bottom:var(--space-md);border:1px solid var(--border-light);overflow:hidden}.block-header{padding:var(--space-md);cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:var(--transition)}.block-header:hover{background:var(--cream)}.block-header h2{font-family:var(--font-display);font-size:1.25rem;color:var(--night);display:flex;align-items:center;gap:.75rem}.block-header .icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem}.block-header .toggle{width:28px;height:28px;border-radius:50%;background:var(--cream-dark);display:flex;align-items:center;justify-content:center;transition:var(--transition)}.block-header .toggle svg{width:16px;height:16px;fill:var(--text-secondary);transition:var(--transition)}.content-block.open .toggle{background:var(--sage)}.content-block.open .toggle svg{fill:white;transform:rotate(180deg)}.block-content{max-height:0;overflow:hidden;transition:max-height .5s ease}.content-block.open .block-content{max-height:3000px}.block-inner{padding:0 var(--space-md) var(--space-md)}.block-inner p{margin-bottom:var(--space-sm);color:var(--text-primary)}.block-inner p:last-child{margin-bottom:0}.block-inner ul,.block-inner ol{margin:var(--space-sm) 0;padding-left:1.5rem}.block-inner li{margin-bottom:.5rem;line-height:1.65}
         .teaser{padding:0 var(--space-md) var(--space-sm);color:var(--text-secondary);font-size:.95rem}
-        .signs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-sm);margin:var(--space-sm) 0}.sign-card{background:var(--cream);border-radius:var(--radius-sm);padding:var(--space-sm);text-align:center}.sign-card .icon{font-size:1.5rem;margin-bottom:.25rem}.sign-card p{font-size:.9rem;font-weight:500;color:var(--night);margin:0}
-        .mechanism-box{background:rgba(107,155,195,0.08);border-left:4px solid var(--sky-blue);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:var(--space-sm) var(--space-md);margin:var(--space-md) 0}.mechanism-box summary{font-weight:600;color:var(--sky-blue);cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem}.mechanism-box summary::-webkit-details-marker{display:none}.mechanism-box summary::before{content:'▶';font-size:.7rem;transition:var(--transition)}.mechanism-box[open] summary::before{transform:rotate(90deg)}.mechanism-box .content{margin-top:var(--space-sm);font-size:.95rem;color:var(--text-secondary)}
         .callout{background:rgba(125,155,118,0.12);border:2px solid var(--sage);border-radius:var(--radius-md);padding:var(--space-md);margin:var(--space-md) 0}.callout h4{font-family:var(--font-display);font-size:1rem;color:var(--sage-dark);margin-bottom:.5rem}.callout p{font-size:.95rem;margin:0}
         .callout-crisis{background:rgba(220,53,69,0.08);border-color:var(--crisis-red)}.callout-crisis h4{color:var(--crisis-red)}.callout-crisis a{color:var(--crisis-red);font-weight:600}
         .affirmation{text-align:center;padding:var(--space-md) var(--space-sm);margin:var(--space-sm) 0;opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}.affirmation.visible{opacity:1;transform:translateY(0)}.affirmation p{font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--sage-dark);font-style:italic}.affirmation .aff-icon{display:inline-block;width:32px;height:32px;border-radius:50%;background:rgba(125,155,118,0.15);line-height:32px;text-align:center;font-size:.9rem;margin-bottom:.4rem}
         .scenario-card{background:white;border:2px solid rgba(107,155,195,0.25);border-radius:var(--radius-md);padding:var(--space-md);margin:var(--space-md) 0}.scenario-card .scenario-label{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--sky-blue);margin-bottom:.5rem}.scenario-card .scenario-prompt{font-size:1rem;font-weight:500;margin-bottom:var(--space-sm);line-height:1.6}
         .scenario-options{display:flex;flex-direction:column;gap:.5rem}.scenario-option{padding:.75rem 1rem;background:var(--cream);border:2px solid var(--border-light);border-radius:var(--radius-sm);cursor:pointer;font-size:.95rem;transition:var(--transition)}.scenario-option:hover{border-color:var(--sage)}.scenario-option.correct{border-color:var(--sage);background:rgba(125,155,118,0.2)}.scenario-option.incorrect{border-color:var(--rust);background:rgba(193,123,94,0.12)}.scenario-option.disabled{pointer-events:none;opacity:.7}.scenario-option.correct.disabled,.scenario-option.incorrect.disabled{opacity:1}
         .scenario-feedback{margin-top:var(--space-sm);padding:var(--space-sm);border-radius:var(--radius-sm);font-size:.93rem;display:none;line-height:1.6}.scenario-feedback.show{display:block}.scenario-feedback.correct{background:rgba(125,155,118,0.12);color:var(--sage-dark)}.scenario-feedback.incorrect{background:rgba(193,123,94,0.12);color:var(--rust)}
-        .reflection-box{background:linear-gradient(135deg,rgba(107,155,195,0.1),rgba(125,155,118,0.1));border-radius:var(--radius-md);padding:var(--space-md);margin:var(--space-lg) 0;text-align:center}.reflection-box .icon{font-size:1.75rem;margin-bottom:.5rem}.reflection-box h3{font-family:var(--font-display);font-size:1.1rem;color:var(--night);margin-bottom:.5rem}.reflection-box p{font-size:1rem;color:var(--text-secondary);max-width:500px;margin:0 auto;line-height:1.6}.reflection-box .hint{font-size:.85rem;margin-top:var(--space-sm);font-style:italic}
         .quiz-block{background:white;border-radius:var(--radius-md);border:2px solid var(--border-light);margin:var(--space-lg) 0;overflow:hidden}.quiz-header{padding:var(--space-md);background:var(--cream-dark);cursor:pointer;display:flex;align-items:center;justify-content:space-between}.quiz-header h3{font-family:var(--font-display);font-size:1.1rem;color:var(--night)}.quiz-content{max-height:0;overflow:hidden;transition:max-height .4s ease}.quiz-block.open .quiz-content{max-height:2400px}.quiz-inner{padding:var(--space-md)}.quiz-question{font-size:1rem;font-weight:500;margin-bottom:var(--space-sm)}.quiz-options{display:flex;flex-direction:column;gap:.5rem}.quiz-option{padding:.75rem 1rem;background:var(--cream);border:2px solid var(--border-light);border-radius:var(--radius-sm);cursor:pointer;font-size:.95rem;transition:var(--transition)}.quiz-option:hover{border-color:var(--sage)}.quiz-option.correct{border-color:var(--sage);background:rgba(125,155,118,0.2)}.quiz-option.incorrect{border-color:var(--rust);background:rgba(193,123,94,0.15)}.quiz-option.disabled{pointer-events:none;opacity:.7}.quiz-option.correct.disabled,.quiz-option.incorrect.disabled{opacity:1}
         .quiz-counter{text-align:center;margin-bottom:var(--space-md);font-size:.9rem;color:var(--text-secondary)}.quiz-counter strong{color:var(--sage-dark)}.quiz-q-block{margin-bottom:var(--space-lg)}.quiz-q-block:last-of-type{margin-bottom:0}
         .module-nav{display:flex;justify-content:space-between;align-items:center;padding:var(--space-lg) 0;border-top:1px solid var(--border-light);margin-top:var(--space-lg)}.nav-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;background:white;border:2px solid var(--border-light);border-radius:var(--radius-sm);text-decoration:none;color:var(--night);font-weight:600;font-size:.95rem;transition:var(--transition)}.nav-btn:hover{border-color:var(--sage);background:var(--cream)}.nav-btn.primary{background:var(--sage);border-color:var(--sage);color:white}.nav-btn.primary:hover{background:var(--sage-dark);border-color:var(--sage-dark)}
         .complete-section{text-align:center;margin:var(--space-lg) 0}.complete-btn{padding:1rem 2rem;background:var(--sage);border:none;border-radius:var(--radius-md);color:white;font-family:var(--font-body);font-size:1rem;font-weight:600;cursor:pointer;transition:var(--transition)}.complete-btn:hover{background:var(--sage-dark);transform:translateY(-2px)}.complete-btn.completed{background:var(--cream-dark);color:var(--text-secondary);cursor:default}.complete-btn.completed:hover{transform:none}
         .key-term{font-weight:600;color:var(--night);border-bottom:2px solid rgba(107,155,195,0.3)}
-        .crisis-box{background:linear-gradient(135deg,var(--crisis-red),#B02A37);border-radius:var(--radius-md);padding:var(--space-lg);text-align:center;color:white;margin:var(--space-lg) 0}.crisis-box h3{font-family:var(--font-display);font-size:1.5rem;margin-bottom:.5rem}.crisis-box p{font-size:1rem;opacity:.95;margin-bottom:.5rem}.crisis-box .number{font-family:var(--font-display);font-size:3.5rem;font-weight:700}.crisis-box .number a{color:white;text-decoration:none}.crisis-box .subtitle{font-size:1rem;opacity:.9;margin-top:.3rem}
         @media(max-width:1100px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:1.5rem;gap:.25rem;border-bottom:1px solid var(--border-light);box-shadow:var(--shadow-medium);max-height:70vh;overflow-y:auto}.nav-links.active{display:flex}.nav-links a{font-size:1rem;padding:.6rem 1rem}.mobile-menu-btn{display:block}}@media(max-width:768px){.navbar{padding:.75rem 1rem}.module-header{padding:7rem 1.5rem 2rem}.content-section{padding:var(--space-md) 1.5rem var(--space-lg)}.sticky-help{bottom:16px;right:16px}.help-btn{width:52px;height:52px}.module-nav{flex-direction:column;gap:1rem}.nav-btn{width:100%;justify-content:center}}
     </style>
 </head>
@@ -50,55 +46,46 @@
                 <li><a href="suicide.html">Suicide Awareness</a></li>
                 <li><a href="supporting.html" class="active">Supporting Friends</a></li>
                 <li><a href="privacy.html">Privacy</a></li></ul><button class="mobile-menu-btn" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button></div></nav>
-    <div class="sticky-help"><button class="help-btn" onclick="toggleHelp()" aria-label="Get Help Now"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg></button><div class="help-panel" id="helpPanel"><button class="close-btn" onclick="toggleHelp()">&times;</button><h4>You are not alone</h4><a href="tel:988"><strong>988</strong> — Suicide & Crisis Lifeline</a><a href="sms:741741?body=HOME"><strong>Text HOME to 741741</strong> — Crisis Text Line</a><a href="https://www.crisistextline.org/" target="_blank" rel="noopener">More resources →</a></div></div>
-    <header class="module-header"><div class="module-badge">Module 5</div><h1>Supporting Friends</h1><p class="intro">You can make a real difference for someone who’s struggling — without being their therapist.</p></header>
+    <div class="sticky-help"><button class="help-btn" onclick="toggleHelp()" aria-label="Get Help Now"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg></button><div class="help-panel" id="helpPanel"><button class="close-btn" onclick="toggleHelp()">&times;</button><h4>You are not alone</h4><a href="tel:988"><strong>988</strong> — Suicide & Crisis Lifeline</a><a href="sms:741741?body=HOME"><strong>Text HOME to 741741</strong> — Crisis Text Line</a><a href="https://www.crisistextline.org/" target="_blank" rel="noopener">More resources &rarr;</a></div></div>
+    <header class="module-header"><div class="module-badge">Module 5</div><h1>Supporting Friends</h1><p class="intro">You can make a real difference for someone who&rsquo;s struggling &mdash; without being their therapist.</p></header>
     <main class="content-section">
 
         <div class="content-block open">
             <div class="block-header" onclick="toggleBlock(this)">
-                <h2><span class="icon" style="background: rgba(0,184,148,0.15);">💚</span> What Actually Helps</h2>
+                <h2><span class="icon" style="background: rgba(0,184,148,0.15);">&#x1F49A;</span> What Actually Helps</h2>
                 <span class="toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></span>
             </div>
-            <p class="teaser">Peer support can be transformative — when done right...</p>
+            <p class="teaser">Peer support can be transformative &mdash; when done right...</p>
             <div class="block-content"><div class="block-inner">
-                    <p><strong>Listen without fixing</strong> — Say <em>"That sounds really hard"</em> instead of <em>"Have you tried..."</em></p>
-                    <p><strong>Validate without minimizing</strong> — <span class="key-term">Acknowledgment is not agreement</span>. Never compare their pain to someone else’s.</p>
-                    <p><strong>Encourage professional connection</strong> — Gently suggest talking to a <span class="key-term">trusted adult</span>. Offer to go with them.</p></div></div>
+                    <p><strong>Listen without fixing</strong> &mdash; Say <em>&ldquo;That sounds really hard&rdquo;</em> instead of <em>&ldquo;Have you tried...&rdquo;</em></p>
+                    <p><strong>Validate without minimizing</strong> &mdash; <span class="key-term">Acknowledgment is not agreement</span>. Never compare their pain to someone else&rsquo;s.</p>
+                    <p><strong>Encourage professional connection</strong> &mdash; Gently suggest talking to a <span class="key-term">trusted adult</span>. Offer to go with them.</p></div></div>
         </div>
 
         <div class="affirmation" data-observe>
-            <div class="aff-icon">✦</div>
+            <div class="aff-icon">&#x2726;</div>
             <p>Just showing up and listening is more powerful than most people realize.</p>
         </div>
 
-     <div class="scenario-card" id="practiceSimulator" style="display:none">
-            <div class="scenario-label">What would you do?</div>
-            <p class="scenario-prompt">Your friend breaks down after school: "Everything feels pointless. I don’t know why I even bother anymore." What’s the best immediate response?</p>
-            <div class="scenario-options">
-                <div class="scenario-option" onclick="handleScenario('scenario1', this, 0)">"Things aren’t that bad — you got an A last week."</div>
-                <div class="scenario-option" onclick="handleScenario('scenario1', this, 1)">Stay with them, listen without fixing, acknowledge how they feel, and gently ask if they want to talk to a counselor together.</div>
-                <div class="scenario-option" onclick="handleScenario('scenario1', this, 2)">"You should tell your parents — they can help."</div>
-            </div>
-            <div class="scenario-feedback" id="scenario1Feedback"></div>
-        </div>
+        <!-- CHANGE 1: scenario1 REMOVED -->
 
         <div class="content-block">
             <div class="block-header" onclick="toggleBlock(this)">
-                <h2><span class="icon" style="background: rgba(193,123,94,0.15);">⚠️</span> What Does Not Help</h2>
+                <h2><span class="icon" style="background: rgba(193,123,94,0.15);">&#x26A0;&#xFE0F;</span> What Does Not Help</h2>
                 <span class="toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></span>
             </div>
             <p class="teaser">Even well-meaning responses can do harm...</p>
             <div class="block-content"><div class="block-inner">
-                    <p><strong>"Just get over it"</strong> — Dismisses their experience and implies they should control it through willpower.</p>
-                    <p><strong>Comparing problems</strong> — <em>"At least you don’t have..."</em> invalidates their pain. <span class="key-term">Suffering is not a competition</span>.</p>
-                    <p><strong>Promising secrecy about safety</strong> — If someone mentions hurting themselves, <span class="key-term">their life matters more than their temporary anger</span>.</p></div></div>
+                    <p><strong>&ldquo;Just get over it&rdquo;</strong> &mdash; Dismisses their experience and implies they should control it through willpower.</p>
+                    <p><strong>Comparing problems</strong> &mdash; <em>&ldquo;At least you don&rsquo;t have...&rdquo;</em> invalidates their pain. <span class="key-term">Suffering is not a competition</span>.</p>
+                    <p><strong>Promising secrecy about safety</strong> &mdash; If someone mentions hurting themselves, <span class="key-term">their life matters more than their temporary anger</span>.</p></div></div>
         </div>
 
         <div class="scenario-card" id="scenario2">
             <div class="scenario-label">What would you do?</div>
-            <p class="scenario-prompt">At midnight your friend texts: "I don’t think anyone would care if I wasn’t here. Don’t tell anyone — I just needed to say it." What do you do?</p>
+            <p class="scenario-prompt">At midnight your friend texts: &ldquo;I don&rsquo;t think anyone would care if I wasn&rsquo;t here. Don&rsquo;t tell anyone &mdash; I just needed to say it.&rdquo; What do you do?</p>
             <div class="scenario-options">
-                <div class="scenario-option" onclick="handleScenario('scenario2', this, 0)">Respect their privacy — they said they just needed to talk</div>
+                <div class="scenario-option" onclick="handleScenario('scenario2', this, 0)">Respect their privacy &mdash; they said they just needed to talk</div>
                 <div class="scenario-option" onclick="handleScenario('scenario2', this, 1)">Text encouragement and check in tomorrow</div>
                 <div class="scenario-option" onclick="handleScenario('scenario2', this, 2)">Tell them you care too much to stay silent, stay in contact, and reach out to a trusted adult immediately</div>
             </div>
@@ -107,30 +94,244 @@
 
         <div class="content-block">
             <div class="block-header" onclick="toggleBlock(this)">
-                <h2><span class="icon" style="background: rgba(220,53,69,0.12);">🚨</span> When to Involve Adults — and Taking Care of Yourself</h2>
+                <h2><span class="icon" style="background: rgba(220,53,69,0.12);">&#x1F6A8;</span> When to Involve Adults &mdash; and Taking Care of Yourself</h2>
                 <span class="toggle"><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></span>
             </div>
             <p class="teaser">Some situations are bigger than peer support...</p>
             <div class="block-content"><div class="block-inner">
-                    <div class="callout callout-crisis"><h4>Involve an adult immediately if your friend:</h4><p>Talks about wanting to die, gives away belongings, shows sudden calm after depression, or if you’re genuinely worried — <strong>even if they ask you not to tell</strong>.</p></div>
-                    <p>Say: <em>"I care about you too much to keep this to myself."</em></p>
+                    <div class="callout callout-crisis"><h4>Involve an adult immediately if your friend:</h4><p>Talks about wanting to die, gives away belongings, shows sudden calm after depression, or if you&rsquo;re genuinely worried &mdash; <strong>even if they ask you not to tell</strong>.</p></div>
+                    <p>Say: <em>&ldquo;I care about you too much to keep this to myself.&rdquo;</em></p>
                     <p><strong>Safe2Tell Wyoming</strong> (<a href="https://www.safe2tellwy.org" target="_blank" rel="noopener">safe2tellwy.org</a>) lets you report concerns anonymously.</p>
-                    <p><strong>You deserve care too.</strong> Supporting someone through crisis is heavy. Talk to a trusted adult about how <em>you’re</em> feeling. <span class="key-term">Sustainable compassion</span> requires boundaries.</p></div></div>
+                    <p><strong>You deserve care too.</strong> Supporting someone through crisis is heavy. Talk to a trusted adult about how <em>you&rsquo;re</em> feeling. <span class="key-term">Sustainable compassion</span> requires boundaries.</p></div></div>
         </div>
 
-        
-<div style="background:linear-gradient(135deg,rgba(107,155,195,0.12),rgba(125,155,118,0.12));border:2px solid rgba(107,155,195,0.25);border-radius:var(--radius-md);padding:var(--space-lg) var(--space-md);margin:var(--space-lg) 0;text-align:center">
+        <!-- CHANGE 2: reflection-box REMOVED -->
+        <!-- CHANGE 3: Simulator CTA + Simulator inserted -->
+
+<div style="background:linear-gradient(135deg,rgba(107,155,195,0.12),rgba(125,155,118,0.12));border:2px solid rgba(107,155,195,0.25);border-radius:var(--radius-md);padding:var(--space-lg) var(--space-md);margin:var(--space-lg) 0;text-align:center" id="simCTA">
     <div style="font-size:2rem;margin-bottom:var(--space-xs)">🗣</div>
     <h3 style="font-family:var(--font-display);font-size:1.2rem;color:var(--night);margin-bottom:var(--space-xs)">Practice What You've Learned</h3>
     <p style="font-size:.95rem;color:var(--text-secondary);max-width:460px;margin:0 auto var(--space-md);line-height:1.6">Three real scenarios. No wrong answers — only learning. Practice recognizing the signs and responding when a friend needs help.</p>
-    <button onclick="var el=document.getElementById('practiceSimulator');el.style.display='block';el.scrollIntoView({behavior:'smooth',block:'start'});" style="padding:.85rem 2rem;background:var(--sage);border:none;border-radius:var(--radius-sm);color:white;font-family:var(--font-body);font-size:1rem;font-weight:600;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:.5rem">
+    <button onclick="document.getElementById('practiceSimulator').style.display='block';document.getElementById('practiceSimulator').scrollIntoView({behavior:'smooth',block:'start'});this.closest('#simCTA').style.display='none';" style="padding:.85rem 2rem;background:var(--sage);border:none;border-radius:var(--radius-sm);color:white;font-family:var(--font-body);font-size:1rem;font-weight:600;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:.5rem">
         Start Practice
         <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
     </button>
     <p style="font-size:.8rem;color:var(--text-secondary);margin-top:var(--space-sm)">Optional — takes about 5 minutes per scenario</p>
 </div>
-        <div class="reflection-box"><div class="icon">✎</div><h3>Pause and Reflect</h3><p>How would you want a friend to support you if you were struggling? Advice, presence, or something else?</p><p class="hint">Most people don’t want solutions. They want to be heard.</p></div>
-        <div class="quiz-block" id="quizBlock"><div class="quiz-header" onclick="toggleQuiz()"><h3>📝 Check Your Understanding</h3><span class="toggle"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="currentColor"/></svg></span></div><div class="quiz-content"><div class="quiz-inner"><div class="quiz-counter"><strong id="quizScore">0</strong> of 3 correct</div>
+
+<div id="practiceSimulator" style="display:none;margin:var(--space-lg) 0">
+    <div style="background:white;border-radius:var(--radius-md);border:2px solid rgba(107,155,195,0.25);overflow:hidden">
+        <div style="padding:var(--space-md);background:var(--cream-dark);display:flex;align-items:center;justify-content:space-between">
+            <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--night)">🗣 Practice: Supporting a Friend</h3>
+            <span style="font-size:.85rem;color:var(--text-secondary);cursor:pointer;font-weight:500" onclick="document.getElementById('quizBlock').scrollIntoView({behavior:'smooth'})">Skip to Quiz →</span>
+        </div>
+        <div style="padding:var(--space-md)" id="simRoot"></div>
+    </div>
+</div>
+
+<script>
+(function(){
+var SC=[
+{id:"jake",title:"The Quiet Withdrawal",icon:"🌄",diff:"Start Here",
+desc:"Your friend Jake has been pulling away. Practice recognizing the signs.",
+nodes:{
+start:{t:"n",x:"It's Tuesday at lunch. Jake used to sit with your group every day, but he hasn't shown up in over a week. You spot him walking alone toward the library with his hood up. He looks exhausted.",
+o:[{x:"Show him he's missed — call out across the hall so he knows the group wants him around",g:"call_out"},
+{x:"Walk over and fall into step next to him without making it a big deal",g:"walk_with"},
+{x:"Respect his space for now and send a thoughtful text checking in tonight",g:"text_later"}]},
+call_out:{t:"f",tone:"sage",x:"Your heart's in the right place, but calling out across a crowded hallway puts Jake on the spot. When someone is withdrawing, public attention can feel overwhelming.",
+l:"People who are struggling often avoid attention. Meeting them where they are creates safety.",
+o:[{x:"Try a different approach",g:"start"}]},
+text_later:{t:"f",tone:"sage",x:"Texting shows you care, but it's easy to ignore. Jake has been withdrawing for over a week — a pattern, not a bad day. In-person connection is harder to dismiss.",
+l:"Isolation feeds on itself. The longer someone withdraws, the harder it becomes to reach out.",
+o:[{x:"Try a different approach",g:"start"}]},
+walk_with:{t:"c",who:"Jake",x:"Jake glances at you, surprised. \"Oh... hey. Yeah, sure.\" He doesn't say anything else. You walk together in silence toward the library.",
+o:[{x:"Be upfront: \"What's going on? We haven't seen you in a while.\"",g:"direct"},
+{x:"Let the silence sit, then say \"No pressure — just wanted to check in.\"",g:"gentle"},
+{x:"Keep it light — talk about a game or class to help him feel comfortable",g:"casual"}]},
+direct:{t:"f",tone:"sage",x:"Being direct can work, but framing his absence as something he owes an explanation for adds pressure. Guilt about letting people down is often already weighing on them.",
+l:"\"I noticed\" centers your care. \"You've been MIA\" centers their absence. Very different weight.",
+o:[{x:"Try the gentler approach",g:"gentle"}]},
+casual:{t:"f",tone:"sage",x:"Keeping things normal can rebuild comfort, but Jake has been isolating for a week — this might be your window before he pulls away further.",
+l:"Normal conversation is a bridge, not a destination.",
+o:[{x:"Continue with the check-in",g:"gentle"}]},
+gentle:{t:"c",who:"Jake",x:"Jake is quiet for a long time. \"I don't know. Everything just feels... heavy, I guess. Like I can't make myself care about anything.\" He pulls his hood tighter. \"It's stupid.\"",
+o:[{x:"\"That's not stupid. How long has it been feeling like this?\"",g:"validate"},
+{x:"\"I get that — honestly, most people feel like that sometimes. It does get better.\"",g:"minimize"},
+{x:"\"I've been there. What helped me was getting outside more — want to try that?\"",g:"fix"}]},
+minimize:{t:"f",tone:"crisis",x:"When someone finally opens up after a week of silence, hearing \"everyone feels like that\" tells them their pain isn't special enough to matter. It shuts the door they just cracked open.",
+l:"Minimizing someone's experience communicates that their feelings aren't valid. What they need first is to feel heard.",
+o:[{x:"Try validating instead",g:"validate"}]},
+fix:{t:"f",tone:"sage",x:"Jumping to solutions is natural — you want to help. But Jake didn't ask for advice. He shared something vulnerable. He needs to feel heard before he can hear suggestions.",
+l:"Listen first, validate second, suggest third — and only if they ask.",
+o:[{x:"Try validating instead",g:"validate"}]},
+validate:{t:"c",who:"Jake",x:"Jake's shoulders drop — not in defeat, but like he's letting go of something. \"A few weeks, I think. Maybe longer. I just... don't want to be around people. And then I feel bad about not wanting to be around people.\" He looks at you. \"You're the first person who's asked.\"",
+o:[{x:"\"I'm glad you told me. Have you thought about talking to someone like the counselor?\"",g:"suggest"},
+{x:"\"You don't have to go through this alone. I'm here whenever you need — always.\"",g:"be_person"},
+{x:"\"That sounds like depression — it might be worth seeing a doctor about it.\"",g:"diagnose"}]},
+be_person:{t:"f",tone:"crisis",x:"This comes from genuine care, but it puts a weight on you that isn't yours to carry. You're his friend, not his therapist. Being his only lifeline isn't sustainable for either of you.",
+l:"You can be a bridge to help without being the help itself.",
+o:[{x:"Try suggesting professional help",g:"suggest"}]},
+diagnose:{t:"f",tone:"sage",x:"You might be right, but labeling it can feel clinical and scary. He's not ready for a diagnosis from a friend. Focus on connecting him to someone who can help.",
+l:"Recognize, don't diagnose. Notice patterns without putting a label on someone's experience.",
+o:[{x:"Try a softer approach",g:"suggest"}]},
+suggest:{t:"c",who:"Jake",x:"Jake hesitates. \"I don't know... what would I even say? 'Hi, I feel bad all the time'?\" A weak half-smile. \"That sounds dramatic.\"",
+o:[{x:"\"That's literally what they're there for. Want me to go with you?\"",g:"end_good"},
+{x:"\"No pressure — just keep it in the back of your mind as an option.\"",g:"end_ok"}]},
+end_ok:{t:"f",tone:"sage",x:"\"Just think about it\" often means \"never do it.\" The gap between wanting help and getting help is where people get stuck. Offering to go removes the biggest barrier.",
+l:"The offer to accompany someone transforms a suggestion into an action plan.",
+o:[{x:"Try offering to go with him",g:"end_good"}]},
+end_good:{t:"e",title:"You helped Jake take a step forward",
+pts:["Approached privately, respecting his space","Listened without judgment and validated his experience","Recognized warning signs without diagnosing","Suggested professional help and offered to go with him"],
+msg:"Most people who are struggling won't ask for help. They need someone to notice, care enough to ask, and make the path to help feel less daunting."}}},
+{id:"maya",title:"The Brave Face",icon:"🎭",diff:"Intermediate",
+desc:"Maya seems fine on the surface. But something she says makes you pause.",
+nodes:{
+start:{t:"n",x:"You're working on a group project after school. Maya is her usual self — laughing, making jokes. Then she gets quiet and says, almost too casually: \"Honestly, I don't think anyone would even notice if I wasn't there.\"",
+o:[{x:"Reassure her — \"Are you kidding? You're the person who holds this group together.\"",g:"laugh"},
+{x:"Pause and ask, \"What makes you say that?\"",g:"ask"},
+{x:"Let it go — she's probably just having a bad moment or fishing for compliments",g:"ignore"}]},
+laugh:{t:"f",tone:"crisis",x:"Complimenting her social persona reinforces the mask. If she's testing whether anyone sees past the performance, your response just told her the answer is no.",
+l:"People embed real pain in casual statements. The ones who seem \"fine\" are sometimes the ones who need to be asked the most.",
+o:[{x:"Try taking her words seriously",g:"ask"}]},
+ignore:{t:"f",tone:"crisis",x:"Maya said something that could be a window into how she's really feeling. Letting it go tells her that what she said didn't matter enough to pause for.",
+l:"When someone says something that doesn't match their usual energy, trust your instinct that something felt off.",
+o:[{x:"Try asking what she meant",g:"ask"}]},
+ask:{t:"c",who:"Maya",x:"The smile falters for a second. \"Nothing, forget it. I'm fine.\" She picks up her phone, scrolling — but her eyes aren't actually moving.",
+o:[{x:"She said she's fine — pushing harder would be overstepping. Respect her answer.",g:"drop"},
+{x:"Quietly: \"You don't have to be fine right now. I'm asking because I want to know.\"",g:"persist"}]},
+drop:{t:"f",tone:"sage",x:"When someone says \"I'm fine\" after a statement like that, and their body language doesn't match, they often want to be asked again. One more gentle push makes you someone who cares enough to try twice.",
+l:"The first \"I'm fine\" is often a test. Will you accept the easy answer, or sit with the hard one?",
+o:[{x:"Try one more time",g:"persist"}]},
+persist:{t:"c",who:"Maya",x:"She sets the phone down. The performance drops. \"I'm just... really tired of pretending everything is okay. My parents are getting divorced and nobody at home talks about it. I come to school and act like everything is great because that's what people expect. But I'm so tired.\" Her voice cracks. \"I don't even know who I am when I'm not performing.\"",
+o:[{x:"\"That sounds exhausting — carrying all of that and making everyone think you're fine.\"",g:"val_m"},
+{x:"\"I went through something similar with my family — I know exactly how that feels.\"",g:"relate"},
+{x:"\"That's a lot. Have you tried writing it down? Getting it out of your head can help.\"",g:"advice"}]},
+relate:{t:"f",tone:"sage",x:"Sharing your experience can build connection, but timing matters. Right now, Maya needs her experience to be the focus — not yours.",
+l:"Empathy says \"I see your pain.\" Relating says \"Let me tell you about mine.\" Empathy comes first.",
+o:[{x:"Try validating her experience",g:"val_m"}]},
+advice:{t:"f",tone:"sage",x:"Maya just said she doesn't know who she is anymore. Suggesting journaling skips past the weight of what she shared. She needs someone to sit with the truth she just spoke.",
+l:"When someone shares something this vulnerable, acknowledge the courage it took. Solutions come later.",
+o:[{x:"Try acknowledging what she shared",g:"val_m"}]},
+val_m:{t:"c",who:"Maya",x:"She exhales — really exhales, like she's been holding her breath for weeks. \"Yeah. It is exhausting.\" A pause. \"I didn't think anyone would actually hear it. I've been dropping hints for weeks.\"",
+o:[{x:"\"I hear you. Would you be open to talking to the counselor — even just once?\"",g:"end_m"},
+{x:"\"I'm here for you — anytime, about anything. You never have to perform around me.\"",g:"always"}]},
+always:{t:"f",tone:"sage",x:"Kind and genuine. But Maya has been dropping hints for weeks — she needs more than a willing ear. Your role is to be the bridge, not the destination.",
+l:"\"I'm here for you\" and \"let's get you real support\" work together.",
+o:[{x:"Try combining both",g:"end_m"}]},
+end_m:{t:"e",title:"You saw through the performance",
+pts:["Recognized that a casual comment carried real weight","Persisted gently when she first deflected","Created space for honesty without forcing it","Validated before suggesting help"],
+msg:"Maya had been dropping hints for weeks. You were the first person who stopped, asked twice, and actually listened."}}},
+{id:"crisis",title:"The Crisis Moment",icon:"⚡",diff:"Advanced",
+desc:"A friend sends a text that stops you cold. Practice when the stakes are highest.",
+nodes:{
+start:{t:"n",x:"It's 11pm. Your phone buzzes with a text from Alex: \"Hey. Thanks for being a good friend. You've always been one of the real ones.\" You haven't talked to Alex in days. They gave away their favorite hoodie last week and seemed strangely calm after months of being down.",
+o:[{x:"It's a nice message — reply warmly and tell them they matter to you too",g:"casual_r"},
+{x:"Something about this feels off. Call them right now.",g:"call"},
+{x:"Text back asking if everything's okay — check in without overreacting",g:"text_c"}]},
+casual_r:{t:"f",tone:"crisis",x:"Stop. Goodbye-like messages + giving away belongings + sudden calm after depression = converging warning signs. This combination is one of the most recognized patterns preceding a suicide attempt.",
+l:"When signs converge — farewell messages, giving things away, sudden peace after struggle — treat it as an emergency.",
+o:[{x:"Call Alex now",g:"call"}]},
+text_c:{t:"f",tone:"crisis",x:"Texting is better than nothing, but texts can be ignored or answered with \"I'm fine.\" In a potential crisis, minutes matter. Hearing their voice tells you more in 10 seconds than any text.",
+l:"In a crisis, voice contact is essential. It's harder to hide pain in a voice than in a text.",
+o:[{x:"Call Alex",g:"call"}]},
+call:{t:"n",x:"Alex picks up after four rings. \"Hey... why are you calling?\" Their voice is flat. Calm. Too calm. \"I'm fine, I was just being nice. Don't worry about it.\"",
+o:[{x:"\"I have to ask you directly. Are you thinking about hurting yourself?\"",g:"ask_d"},
+{x:"They picked up, they say they're fine — you did your part. Don't make it weird.",g:"accept"}]},
+accept:{t:"f",tone:"crisis",x:"\"I'm fine\" from someone showing multiple warning signs is deflection, not reassurance. Asking directly about suicide does not increase risk. It opens a door.",
+l:"You will never regret asking. You might regret not asking.",
+o:[{x:"Ask directly",g:"ask_d"}]},
+ask_d:{t:"n",x:"Long silence. \"... I don't know. Maybe. I just don't want to feel like this anymore.\" Their voice breaks. \"Please don't tell anyone. Promise me.\"",
+o:[{x:"\"I can't keep that promise. I'm staying on the phone and we're getting help.\"",g:"end_cr"},
+{x:"\"I promise — I won't betray your trust. Just talk to me.\"",g:"promise"}]},
+promise:{t:"f",tone:"crisis",x:"Never promise secrecy when someone's safety is at risk. Keeping this secret could cost their life. Breaking the confidence could save it.",
+l:"Your friendship can survive them being angry. It cannot survive the alternative.",
+o:[{x:"Choose not to keep this secret",g:"end_cr"}]},
+end_cr:{t:"e",crisis:true,title:"You responded to a crisis",
+pts:["Recognized converging warning signs: farewell message, giving things away, sudden calm","Chose voice contact over text — immediacy mattered","Asked directly about suicide — this does not increase risk","Refused to promise secrecy because safety comes first"],
+msg:"The next steps: stay on the phone, contact a trusted adult or call 988 together, and do not leave Alex alone."}}}
+];
+
+var root,curSC;
+function simInit(){
+    root=document.getElementById('simRoot');
+    if(!root)return;
+    simMenu();
+}
+function simMenu(){
+    var h='<p style="color:var(--text-secondary);margin-bottom:var(--space-md)">Choose a scenario to practice.</p>';
+    for(var i=0;i<SC.length;i++){
+        var s=SC[i];
+        h+='<div class="scenario-card" style="cursor:pointer;margin-bottom:.75rem" data-simid="'+s.id+'">';
+        h+='<div class="scenario-label">'+s.icon+' '+s.diff+'</div>';
+        h+='<p class="scenario-prompt" style="margin-bottom:0"><strong>'+s.title+'</strong> — '+s.desc+'</p></div>';
+    }
+    root.innerHTML=h;
+    var cards=root.querySelectorAll('[data-simid]');
+    for(var j=0;j<cards.length;j++){
+        cards[j].addEventListener('click',function(){
+            var sid=this.getAttribute('data-simid');
+            for(var k=0;k<SC.length;k++){if(SC[k].id===sid){curSC=SC[k];simNode('start');return;}}
+        });
+    }
+}
+function simNode(nid){
+    var nd=curSC.nodes[nid];
+    if(!nd)return;
+    var h='<p><span style="font-size:.85rem;color:var(--sky-blue);cursor:pointer;font-weight:500" id="simBackBtn">← Back to scenarios</span></p>';
+    if(nd.t==='e'){
+        h+='<div style="text-align:center;margin:1.5rem 0 1rem"><div style="font-size:2rem;margin-bottom:.5rem">✦</div>';
+        h+='<h3 style="font-family:var(--font-display);color:var(--night)">'+nd.title+'</h3></div>';
+        if(nd.crisis){h+='<div class="callout callout-crisis" style="text-align:center"><h4>If you or someone you know is in crisis:</h4><p>Call or text <strong>988</strong> — free, confidential, 24/7.</p></div>';}
+        h+='<div class="callout"><h4>What you practiced</h4>';
+        for(var p=0;p<nd.pts.length;p++){h+='<p style="margin-bottom:.4rem"><strong style="color:var(--sage)">✓</strong> '+nd.pts[p]+'</p>';}
+        h+='</div>';
+        h+='<p style="color:var(--text-secondary);font-style:italic;margin:1.5rem 0;line-height:1.7">'+nd.msg+'</p>';
+        h+='<div class="scenario-options"><div class="scenario-option" id="simRetryBtn">Try Again</div>';
+        h+='<div class="scenario-option" id="simMenuBtn">Choose Another Scenario</div></div>';
+        root.innerHTML=h;
+        document.getElementById('simBackBtn').addEventListener('click',simMenu);
+        document.getElementById('simRetryBtn').addEventListener('click',function(){simNode('start');});
+        document.getElementById('simMenuBtn').addEventListener('click',simMenu);
+        root.scrollIntoView({behavior:'smooth',block:'start'});
+        return;
+    }
+    if(nd.t==='f'){
+        var cls=nd.tone==='crisis'?'callout callout-crisis':'callout';
+        var lbl=nd.tone==='crisis'?'⚠ Important':'💡 Consider this';
+        h+='<div class="'+cls+'"><h4>'+lbl+'</h4><p>'+nd.x+'</p>';
+        if(nd.l){h+='<p style="margin-top:.75rem;font-size:.9rem;font-style:italic;border-top:1px solid var(--border-light);padding-top:.75rem"><strong style="font-style:normal">What to remember:</strong> '+nd.l+'</p>';}
+        h+='</div>';
+    } else if(nd.t==='c'){
+        h+='<div class="scenario-card"><div class="scenario-label">'+nd.who+'</div>';
+        h+='<p class="scenario-prompt" style="margin-bottom:0">'+nd.x+'</p></div>';
+    } else {
+        h+='<div style="background:var(--cream);border-radius:var(--radius-md);padding:var(--space-md);border:1px solid var(--border-light);margin-bottom:var(--space-sm)">';
+        h+='<p style="margin:0;line-height:1.7">'+nd.x+'</p></div>';
+    }
+    h+='<div class="scenario-options" id="simOpts">';
+    for(var i=0;i<nd.o.length;i++){h+='<div class="scenario-option" data-simgo="'+nd.o[i].g+'">'+nd.o[i].x+'</div>';}
+    h+='</div>';
+    root.innerHTML=h;
+    document.getElementById('simBackBtn').addEventListener('click',simMenu);
+    var opts=document.querySelectorAll('#simOpts .scenario-option');
+    for(var j=0;j<opts.length;j++){
+        opts[j].addEventListener('click',function(){
+            var dest=this.getAttribute('data-simgo');
+            var all=document.querySelectorAll('#simOpts .scenario-option');
+            for(var k=0;k<all.length;k++){all[k].classList.add('disabled');if(all[k]===this)all[k].classList.add('correct');}
+            setTimeout(function(){simNode(dest);},350);
+        });
+    }
+    root.scrollIntoView({behavior:'smooth',block:'start'});
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',simInit);}
+else{simInit();}
+})();
+</script>
+
+
+        <div class="quiz-block" id="quizBlock"><div class="quiz-header" onclick="toggleQuiz()"><h3>&#x1F4DD; Check Your Understanding</h3><span class="toggle"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="currentColor"/></svg></span></div><div class="quiz-content"><div class="quiz-inner"><div class="quiz-counter"><strong id="quizScore">0</strong> of 3 correct</div>
                     <div class="quiz-q-block">
                         <p class="quiz-question">1. Which approach best reflects informed peer support?</p>
                         <div class="quiz-options">
@@ -141,7 +342,6 @@
                         </div>
                         <div class="scenario-feedback" id="q1Feedback"></div>
                     </div>
-
                     <div class="quiz-q-block">
                         <p class="quiz-question">2. A friend confides suicidal thoughts and asks you to keep it secret. Most appropriate response?</p>
                         <div class="quiz-options">
@@ -152,25 +352,23 @@
                         </div>
                         <div class="scenario-feedback" id="q2Feedback"></div>
                     </div>
-
                     <div class="quiz-q-block">
                         <p class="quiz-question">3. Why should teens who support struggling friends maintain their own boundaries?</p>
                         <div class="quiz-options">
                             <div class="quiz-option" onclick="handleQuiz('q3', this, 0)">Good friends always prioritize others</div>
-                            <div class="quiz-option" onclick="handleQuiz('q3', this, 1)">Compassion fatigue is real — teens serving as primary support show increased anxiety and depression themselves</div>
-                            <div class="quiz-option" onclick="handleQuiz('q3', this, 2)">Boundaries signal you don’t care</div>
+                            <div class="quiz-option" onclick="handleQuiz('q3', this, 1)">Compassion fatigue is real &mdash; teens serving as primary support show increased anxiety and depression themselves</div>
+                            <div class="quiz-option" onclick="handleQuiz('q3', this, 2)">Boundaries signal you don&rsquo;t care</div>
                             <div class="quiz-option" onclick="handleQuiz('q3', this, 3)">Self-care is only for adult caregivers</div>
                         </div>
                         <div class="scenario-feedback" id="q3Feedback"></div>
                     </div></div></div></div>
         <div class="complete-section"><button class="complete-btn" id="completeBtn" onclick="markComplete()">Mark Module Complete</button></div>
-        <nav class="module-nav"><a href="stigma.html" class="nav-btn">← Stigma & Getting Help</a><a href="suicide.html" class="nav-btn primary">Next: Suicide Awareness →</a></nav>
+        <nav class="module-nav"><a href="stigma.html" class="nav-btn">&larr; Stigma &amp; Getting Help</a><a href="suicide.html" class="nav-btn primary">Next: Suicide Awareness &rarr;</a></nav>
     </main>
     <script>
         let helpOpen=false;const MODULE_NUM=5;let quizScore=0;const quizAnswered={};
         const scenarioData={
-            scenario1: { correct: 1, rightMsg: "Right. Presence, listening, validation, then a gentle bridge to support. Comparing or immediately redirecting misses the need to be heard first.", wrongMsg: "The best response combines presence, listening, and validation before gently offering professional connection." },
-            scenario2: { correct: 2, rightMsg: "Exactly. This is a safety concern that exceeds peer support. Their life matters more than temporary anger.", wrongMsg: "When someone says \"no one would care if I wasn’t here,\" this is a safety concern. Stay in contact and involve a trusted adult immediately." }};
+            scenario2: { correct: 2, rightMsg: "Exactly. This is a safety concern that exceeds peer support. Their life matters more than temporary anger.", wrongMsg: "When someone says \"no one would care if I wasn\'t here,\" this is a safety concern. Stay in contact and involve a trusted adult immediately." }};
         const quizData={
             q1: { correct: 1, rightMsg: "Correct. Non-judgmental listening, validation, and bridging to professional support.", wrongMsg: "Effective peer support: listen without judgment, validate, and encourage professional connection." },
             q2: { correct: 2, rightMsg: "Correct. Safety overrides secrecy. Stay with them and involve an adult.", wrongMsg: "Suicidal thoughts require adult involvement. Stay with them and get help, even if they asked you not to." },
